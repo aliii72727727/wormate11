@@ -52,7 +52,7 @@
         },
         {
             "id": 700,
-            "name": "01.\ud83d\udd34 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/><div id='online'></div>",
+            "name": "01.\ud83d\udd34 عبسيbmw<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/><div id='online'></div>",
             "region": "australia",
             "serverUrl": "wss://mum-a.wormate.io:31211/wormy",
             "status": 1
