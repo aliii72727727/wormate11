@@ -225,7 +225,6 @@
         1220,
         1221,
         1222,
-        1223,
         1224,
         1225,
         1226,
@@ -5691,36 +5690,6 @@
                 "a_trans",
                 "a_ocean",
                 "a___vio"
-            ]
-        },
-        "1": {
-            "id": 1223,
-            "guest": false,
-            "nonbuyable": false,
-            "price": 0,
-            "priceBefore": 0,
-            "prime": "c__yllw",
-            "base": [
-                "effendi_02_8",
-                "effendi_02_7",
-                "effendi_02_6",
-                "effendi_02_5",
-                "effendi_02_4",
-                "effendi_02_3",
-                "effendi_02_2",
-                "effendi_02_1",
-                "effendi_02_0"
-            ],
-            "glow": [
-                "a__prpl",
-                "a_trans",
-                "a_death",
-                "a__prpl",
-                "a_trans",
-                "a_death",
-                "a__prpl",
-                "a_trans",
-                "a_death"
             ]
         },
         "2": {
