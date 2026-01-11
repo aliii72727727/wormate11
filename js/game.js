@@ -1,5 +1,5 @@
 
-var SITE_XTHOST = "https://wormps.github.io/pandasgame";
+var SITE_XTHOST = "https://wormps.github.io/new";
 window.detectLog = null;
 const _wrmxt = {
     BETAisSkinCustom(input) {
@@ -144,7 +144,7 @@ let servers = {
 
 
 async function loadUsers() {
-    await fetch("https://wormps.github.io/pandasgame/api/api/users.php")
+    await fetch("https://wormps.github.io/new/api/users.php")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
@@ -165,7 +165,7 @@ async function loadUsers() {
 }
 
 async function loadServers() {
-    await fetch("https://wormps.github.io/pandasgame/api/api/server.php")
+    await fetch("https://wormps.github.io/new/api/server.php")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
@@ -297,7 +297,7 @@ ctx.clock.y = -50;
 
 
 /*server name */
-ctx.value_server = new PIXI.Text("WFC", ctx.fontStyle.name);
+ctx.value_server = new PIXI.Text("WPS", ctx.fontStyle.name);
 ctx.value_server.x = 25;
 ctx.value_server.y = -18;
 
@@ -1246,7 +1246,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 };
             }, self;
         }
-        var LINE_LOGO_URL = "/images/linelogo-xmas2022.png",
+        var LINE_LOGO_URL = "https://i.imgur.com/KyKXrNH.png",
             GUEST_AVATAR_URL = "/images/guest-avatar-xmas2022.png",
             isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream,
             GATEWAY_HOST = atob("aHR0cHM6Ly9nYXRld2F5Lndvcm1hdGUuaW8="),
@@ -5622,15 +5622,15 @@ else {
             <div style="margin: 0;" id="loa831pibur0w4gv">
             
         <div onclick="openPopup()"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"> </i> Settings</div>
-        <div id="popup" class="popup">
-        <div class="phdr1"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"></i> WormPS Settings</div>
+                <div id="popup" class="popup">
+        <div class="phdr1"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"></i> Worps Settings </div>
         <button class="close-button" onclick="closePopup()">Close</button>
         
                     <div id="kich-hoat">
                 
            ID : <input type="text" value="${theoKzObjects.FB_UserID}" class="you-id" />
                 
-                <button class="you-id-copy" onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">COPY</button>
+                <button class="you-id-copy" onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID}  Copied'));">Copy</button>
                 </div>   
                 
                
@@ -5641,21 +5641,21 @@ else {
         <tr>
             <td>
             <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Ability EatingSpeed :</span>
+                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Yetenekli Lut Topla :</span>
                     <input class="settings-switchZoom" id="settings-Abilityzoom-switch" type="checkbox"/>
                     <label for="settings-Abilityzoom-switch"></label>
                     </div>
             </td>
             <td>
             <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Modo Streamer :</span>
+                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Publisher Mode:</span>
                     <input class="settings-switchZoom" id="settings-stremingmode-switch" type="checkbox"/>
                     <label for="settings-stremingmode-switch"></label>
                     </div>
             </td>
             <td>
             <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Total Kill : </span>
+                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> HS-KL Save : </span>
                     <input class="settings-switchZoom" id="settings-stremingmodesaveheadshot-switch" type="checkbox"/>
                     <label for="settings-stremingmodesaveheadshot-switch"></label>
                     </div>
@@ -5671,14 +5671,14 @@ else {
             </td>
             <td>
             <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Off Emoj :</span>
+                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Emoji Closed :</span>
                     <input class="settings-switchZoom" id="settings-stremingmodeemoj-switch" type="checkbox"/>
                     <label for="settings-stremingmodeemoj-switch"></label>
                     </div>
             </td>
             <td>
             <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Off Sounds Headshot :</span>
+                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Headshot Voice Closed :</span>
                     <input class="settings-switchZoom" id="settings-stremingmodeheadshot-switch" type="checkbox"/>
                     <label for="settings-stremingmodeheadshot-switch"></label>
                     </div>
@@ -5692,23 +5692,30 @@ else {
     <tbody>
         <tr>
             <td>
-            <div class="spancursor"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:#ff8f00;font-size: 25px;"></i> Select Cursor</div>
+            <div class="spancursor"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:#ff8f00;font-size: 25px;"></i> Seclet Cursor</div>
                     <div class="cursor-container"><div id="default-cursor-btn"><img style="margin-top: -45px; margin-right: 60px; float: right; width: 25px; height: 28px;" class="img" alt="Imgur-Upload" src="https://i.imgur.com/rI522o3.png"></div></div>
             </td>
             <td>
-            <div class="spancursor"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:#ff8f00;font-size: 25px;"></i> Select Background</div>
+            <div class="spancursor"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:#ff8f00;font-size: 25px;"></i> Seclet Bacground</div>
                     <div class="background-container"></div>
             </td>
         </tr>
     </tbody>
 </table>
 
-<div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Keys <a href="/">Q</a> : Automatically turns around in one place. (Quay Đầu Vòng Tròn 1 Chỗ)</div>
-                    <div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Keys <a href="/">R </a> : Quick Revive (Hồi Sinh Nhanh)</div>
-                    
-                    <div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Note : This setting is only for activated members . Thank you !</div>
-                    <div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Lưu Ý : Phần cài đặt này chỉ dành cho thành viên đã kích hoạt . Xin cảm ơn !</div>
-                    <center><div class="hg"><a target="_blank" href="https://thanhtoan.vuonghiep.com/">Activated (Kích Hoạt)</a></div></center>
+            <!-- Ä°FRAME BURAYA EKLENDÄ° -->
+<div class="iframe-container" style="margin-top: -3px;">
+    <div class="spancursor">
+        <i aria-hidden="true" class="fa fa-upload" style="color:#ff8f00; font-size: 25px; margin-right: 10px;"></i>
+        Resolution
+    </div>
+<div id="graphics-settings">
+    <button onclick="applyGraphicsSettings('low', this)">Low</button>
+    <button onclick="applyGraphicsSettings('medium', this)">Medium</button>
+    <button onclick="applyGraphicsSettings('high', this)">Hight</button>
+</div>
+
+<center><div class="hg"><a target="_blank" href="https://discord.gg/8SECrUtJDD">Activated (SekoV4,PANDAX)</a></div></center>
 
            
         </div>`);
@@ -5724,9 +5731,9 @@ else {
       <input type="text" value="${theoKzObjects.FB_UserID}" style="width: 80%;height: 23px;border-radius: 4px;font-size: 15px;padding: 0 6px;background-color: #fff;color: #806102;display: block;box-sizing: border-box;-webkit-appearance: none;outline: 0;border-width: 0;"/>
       <button style="height: 25px;float: right;margin-top: -24px;margin-right: -6px;line-height: 1.2;font-size: 14px;" onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">Copy</button>
       <center>
-        <div class="hg"><a target="_blank" href="https://thanhtoan.vuonghiep.com/">Activated (Kích Hoạt)</a> </div>
+        <div class="hg"><a target="_blank" href="https://discord.gg/8SECrUtJDD">Activated (SekoV4)</a> </div>
       </center>
-     <i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> Instructions for installing on IOS and iPad New 2024: <a style="color: #2ae1eb; font-weight: 600;" href="https://www.youtube.com/watch?v=uyHHXWKHgRw">https://www.youtube.com/watch?v=uyHHXWKHgRw</a> </div>
+     <i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> Activation Price $1 </a> </div>
       
     
 </div>`);
@@ -5792,7 +5799,7 @@ https://youtube.com/@panda-tik?si=-9zprUAOVGknj1Fb" target="_blank" style="margi
       <img src="https://i.imgur.com/tzXGkDO.png" alt="nona" width="155">
     </a>
     <a href="###" target="_blank">
-      <img src="https://imgur.com/mIKEdP6.png" alt="wfc" width="155">
+      <img src="https://imgur.com/5cCaxAT.png" alt="wfc" width="155">
     </a>
   </div>`);
             $(document).ready(function () {
@@ -6032,11 +6039,9 @@ https://youtube.com/@panda-tik?si=-9zprUAOVGknj1Fb" target="_blank" style="margi
 
             $("#mm-coins-box").replaceWith(`<div style="margin: 0;" id="mm-coins-box">
                 
-                <button style='width: 140px;height: 45px;float: right;border-radius: 10px;border: solid #fac 2px;' id='getskin'>Unlock Skins</button>
+ 
                 </div>
                 </div>`);
-                
-
 window.multiplier = 0.625;
 window.zoomLevel = 5;
 
@@ -6519,7 +6524,7 @@ $('#default-cursor-btn').click(function () {
         id = name;
         
         $.ajax({
-            url: 'https://wormps.github.io/pandasgame/api/lan-da-vh.php',
+            url: 'https://wormps.github.io/new/api/lan-da-vh.php',
             method: 'GET',
             dataType: 'json',
             success: function (id) {
