@@ -59,7 +59,7 @@
         },
         {
             "id": 606,
-            "name": "07. Wormate Friend<div id='hoat-dong'></div>",
+            "name": "07. Wormate m<div id='hoat-dong'></div>",
             "region": "japon",
             "serverUrl": "wss://tok-b.wormate.io:31091/wormy",
             "status": 1
