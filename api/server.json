@@ -1,4 +1,13 @@
 {
     "success": true,
-    "servers": []
+    "servers": [
+        {
+            "id": 457,
+            "name": "01.🔴 YT v4<img class='team' src='https://i.imgur.com/SxAuk8b.jpeg'/><div id='online'></div>",
+            "region": "francia",
+            "serverUrl": "wss://fra-c.wormate.io:30055/wormy",
+            "status": 1
+        }
+    ],
+    "last_update": "2026-01-11 11:29:06"
 }
