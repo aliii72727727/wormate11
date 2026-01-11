@@ -1,5 +1,5 @@
 {
-    "revision": 1768153986,
+    "revision": 1768153993,
     "visibleSkin": [
         1000,
         1001,
@@ -225,7 +225,6 @@
         1219,
         1220,
         1221,
-        1222,
         1223,
         1224,
         1225,
@@ -447,6 +446,7 @@
         1429,
         1430,
         1431,
+        1432,
         1433,
         1434,
         1435,
@@ -5665,36 +5665,6 @@
         }
     },
     "skinArrayDict": [
-        {
-            "id": 1222,
-            "guest": false,
-            "nonbuyable": false,
-            "price": 0,
-            "priceBefore": 0,
-            "prime": "c__yllw",
-            "base": [
-                "effendi_01_8",
-                "effendi_01_7",
-                "effendi_01_6",
-                "effendi_01_5",
-                "effendi_01_4",
-                "effendi_01_3",
-                "effendi_01_2",
-                "effendi_01_1",
-                "effendi_01_0"
-            ],
-            "glow": [
-                "a_death",
-                "a___vio",
-                "a_ocean",
-                "a_trans",
-                "a___vio",
-                "a___vio",
-                "a_trans",
-                "a_ocean",
-                "a___vio"
-            ]
-        },
         {
             "id": 1223,
             "guest": false,
@@ -19329,6 +19299,38 @@
                 "a_trans",
                 "a_trans",
                 "a_trans"
+            ]
+        },
+        {
+            "id": 1432,
+            "createdAt": "2025-01-24 19:11:05",
+            "expiresAt": "2025-01-27 19:11:05",
+            "guest": false,
+            "nonbuyable": true,
+            "price": 0,
+            "priceBefore": 0,
+            "prime": "c__yllw",
+            "base": [
+                "slaze_822_8",
+                "slaze_822_7",
+                "slaze_822_6",
+                "slaze_822_5",
+                "slaze_822_4",
+                "slaze_822_3",
+                "slaze_822_2",
+                "slaze_822_1",
+                "slaze_822_0"
+            ],
+            "glow": [
+                "a_death",
+                "a_death",
+                "a_death",
+                "a_death",
+                "a_death",
+                "a_death",
+                "a_death",
+                "a_death",
+                "a_death"
             ]
         },
         {
