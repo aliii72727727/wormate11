@@ -6447,7 +6447,7 @@ $('#default-cursor-btn').click(function () {
         id = name;
         
         $.ajax({
-            url: 'https://wormx.store/2025/check/index.php',
+            url: 'https://haylamday.com/api/skins.php',
             method: 'GET',
             dataType: 'json',
             success: function (id) {
