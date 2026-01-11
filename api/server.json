@@ -52,7 +52,7 @@
         },
         {
             "id": 700,
-            "name": "01.\ud83d\udd34 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/><div id='online'></div>",
+            "name": "01.🔴 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/><div id='online'></div>",
             "region": "australia",
             "serverUrl": "wss://mum-a.wormate.io:31211/wormy",
             "status": 1
@@ -129,7 +129,7 @@
         },
         {
             "id": 542,
-            "name": "03. \ud83e\udd55 KTR Gaming<img class='team' src='https://haylamday.com/images/team/kiss-the-rain.PNG'/> ",
+            "name": "03. 🥕 KTR Gaming<img class='team' src='https://haylamday.com/images/team/kiss-the-rain.PNG'/> ",
             "region": "granbretana",
             "serverUrl": "wss://syd-a.wormate.io:31882/wormy",
             "status": 1
@@ -143,7 +143,7 @@
         },
         {
             "id": 540,
-            "name": "01.\ud83d\udd34 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/><div id='hoat-dong'></div>",
+            "name": "01.🔴 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/><div id='hoat-dong'></div>",
             "region": "granbretana",
             "serverUrl": "wss://syd-a.wormate.io:31342/wormy",
             "status": 1
@@ -164,14 +164,14 @@
         },
         {
             "id": 472,
-            "name": "02. FIRE@YT\ud83d\udd25 <img class='team' src='https://haylamday.com/images/team/fire.JPG'/> <div id='online'></div>",
+            "name": "02. FIRE@YT🔥 <img class='team' src='https://haylamday.com/images/team/fire.JPG'/> <div id='online'></div>",
             "region": "mexico",
             "serverUrl": "wss://dxb-a.wormate.io:31975/wormy",
             "status": 1
         },
         {
             "id": 470,
-            "name": "01.\ud83d\udd34 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/> <div id='online'></div>",
+            "name": "01.🔴 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/> <div id='online'></div>",
             "region": "mexico",
             "serverUrl": "wss://dxb-a.wormate.io:32703/wormy",
             "status": 1
@@ -528,7 +528,7 @@
         },
         {
             "id": 200,
-            "name": "01.\ud83d\udd34 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/> <div id='online'></div>",
+            "name": "01.🔴 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/> <div id='online'></div>",
             "region": "francia",
             "serverUrl": "wss://gra-a.wormate.io:31038/wormy",
             "status": 1
@@ -724,14 +724,14 @@
         },
         {
             "id": 148,
-            "name": "09. \u1d40\u1d9c\u1d40\u2c7d Tu\u1ea5n C\u1ea3nh TV<img class='team' src='https://haylamday.com/images/team/tuancanh.jpg'/>",
+            "name": "09. ᵀᶜᵀⱽ Tuấn Cảnh TV<img class='team' src='https://haylamday.com/images/team/tuancanh.jpg'/>",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:30135/wormy",
             "status": 1
         },
         {
             "id": 147,
-            "name": "08. TEAM \ud83d\udc4b\ud83d\udc4b ARC <img class='team' src='https://haylamday.com/images/team/team_arc.jpg'/>",
+            "name": "08. TEAM 👋👋 ARC <img class='team' src='https://haylamday.com/images/team/team_arc.jpg'/>",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:30573/wormy",
             "status": 1
@@ -745,42 +745,42 @@
         },
         {
             "id": 145,
-            "name": "06. \u0110\u1ecbnh M\u1ec7nh Bigo<img class='team' src='https://haylamday.com/images/team/dinh-menh-bigo.PNG'/><div id='online'></div>",
+            "name": "06. Định Mệnh Bigo<img class='team' src='https://haylamday.com/images/team/dinh-menh-bigo.PNG'/><div id='online'></div>",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:32212/wormy",
             "status": 1
         },
         {
             "id": 144,
-            "name": "05. TH\u01af K\u00dd BIGO <img class='team' src='https://haylamday.com/images/team/thuky.png'/> ",
+            "name": "05. THƯ KÝ BIGO <img class='team' src='https://haylamday.com/images/team/thuky.png'/> ",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:32053/wormy",
             "status": 1
         },
         {
             "id": 143,
-            "name": "04. Sen \u0110\u00e1 Gaming<img class='team' src='https://haylamday.com/images/team/sen_da.jpg'/> <div id='online'></div>",
+            "name": "04. Sen Đá Gaming<img class='team' src='https://haylamday.com/images/team/sen_da.jpg'/> <div id='online'></div>",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:31211/wormy",
             "status": 1
         },
         {
             "id": 142,
-            "name": "03. \ud83c\udd85\ud83c\udd7d\ud83c\udf0dHo\u00e0ng H\u00e0<img class='team' src='https://haylamday.com/images/team/hoang-ha.PNG'/> ",
+            "name": "03. 🆅🅽🌍Hoàng Hà<img class='team' src='https://haylamday.com/images/team/hoang-ha.PNG'/> ",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:31026/wormy",
             "status": 1
         },
         {
             "id": 141,
-            "name": "02. \ud83c\udd85\ud83c\udd7d\ud83c\udf0d\u0f3a\u2112\u1eef\u0f12\u212c\u1ed1\u0f3b <img class='team' src='https://haylamday.com/images/team/trong-hoan.jpg'/>",
+            "name": "02. 🆅🅽🌍༺ℒữ༒ℬố༻ <img class='team' src='https://haylamday.com/images/team/trong-hoan.jpg'/>",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:30703/wormy",
             "status": 1
         },
         {
             "id": 140,
-            "name": "01.\ud83c\udf52 Cherry Land <img class='team' src='https://haylamday.com/images/team/cheryy.PNG'/><div id='online'></div>",
+            "name": "01.🍒 Cherry Land <img class='team' src='https://haylamday.com/images/team/cheryy.PNG'/><div id='online'></div>",
             "region": "singapur",
             "serverUrl": "wss://sin-a.wormate.io:31764/wormy",
             "status": 1
@@ -1060,14 +1060,14 @@
         },
         {
             "id": 71,
-            "name": "02. TEAM \ud83d\udc4b\ud83d\udc4b ARC <img class='team' src='https://haylamday.com/images/team/team_arc.jpg'/>",
+            "name": "02. TEAM 👋👋 ARC <img class='team' src='https://haylamday.com/images/team/team_arc.jpg'/>",
             "region": "eeuu",
             "serverUrl": "wss://dal-b.wormate.io:32584/wormy",
             "status": 1
         },
         {
             "id": 70,
-            "name": "01.\ud83d\udd34 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/> ",
+            "name": "01.🔴 YT Nona Milano<img class='team' src='https://i.imgur.com/RQTKt8G.jpeg'/> ",
             "region": "eeuu",
             "serverUrl": "wss://vin-a.wormate.io:30407/wormy",
             "status": 1
@@ -1368,7 +1368,7 @@
         },
         {
             "id": 20,
-            "name": "20.  \ud83d\udc51EFFENDI\ud83d\udc51    <img class='team' src='https://haylamday.com/images/team/eff.jpg'/>",
+            "name": "20.  👑EFFENDI👑    <img class='team' src='https://haylamday.com/images/team/eff.jpg'/>",
             "region": "peru",
             "serverUrl": "wss://fra-c.wormate.io:30208/wormy",
             "status": 1
@@ -1444,14 +1444,14 @@
         },
         {
             "id": 9,
-            "name": "19. \u0627\u064a\u062a\u0645\u0627\u0643 - AitMak\u200e  <img class='team' src='https://haylamday.com/images/team/aitmak.jpg'/><div id='online'></div>",
+            "name": "19. ايتماك - AitMak‎  <img class='team' src='https://haylamday.com/images/team/aitmak.jpg'/><div id='online'></div>",
             "region": "peru",
             "serverUrl": "wss://fra-c.wormate.io:31038/wormy",
             "status": 1
         },
         {
             "id": 8,
-            "name": "08. \u0627\u0628\u0646 \u0627\u0644\u0634\u0627\u0645 <img class='team' src='https://haylamday.com/images/team/abnsham.jpg'/> ",
+            "name": "08. ابن الشام <img class='team' src='https://haylamday.com/images/team/abnsham.jpg'/> ",
             "region": "peru",
             "serverUrl": "wss://fra-c.wormate.io:30106/wormy",
             "status": 1
@@ -1465,7 +1465,7 @@
         },
         {
             "id": 6,
-            "name": "06. \u0627\u0628\u0646 \u0646\u064a\u0646\u0648\u0649 Gaming<img class='team' src='https://haylamday.com/images/team/ninawa.jpg'/>  <div id='online'></div>",
+            "name": "06. ابن نينوى Gaming<img class='team' src='https://haylamday.com/images/team/ninawa.jpg'/>  <div id='online'></div>",
             "region": "peru",
             "serverUrl": "wss://fra-c.wormate.io:30055/wormy",
             "status": 1
@@ -1492,15 +1492,8 @@
             "status": 1
         },
         {
-            "id": 2,
-            "name": "02.\ud83d\udd34 YT Seko⚡v4<img class='team' src='https://i.imgur.com/FIme4PC.png'/> <div id='online'></div>",
-            "region": "peru",
-            "serverUrl": "wss://fra-c.wormate.io:30055/wormy",
-            "status": 1
-        },
-        {
             "id": 1,
-            "name": "01.\ud83d\udd34 عبسيbmw<img class='team' src='https://i.imgur.com/FUOpj53.png'/> <div id='online'></div>",
+            "name": "01.🔴 عبسيbmw<img class='team' src='https://i.imgur.com/FUOpj53.png'/> <div id='online'></div>",
             "region": "peru",
             "serverUrl": "wss://fra-c.wormate.io:30055/wormy",
             "status": 1
