@@ -144,7 +144,7 @@ let servers = {
 
 
 async function loadUsers() {
-    await fetch("https://wormps.github.io/extension/api/users.php")
+    await fetch("https://aliii72727727.github.io/wormate11/api/user.json")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
