@@ -1,5 +1,5 @@
 
-var SITE_XTHOST = "https://aliii72727727.github.io/wormate11/";
+var SITE_XTHOST = "https://iraqcraft.store";
 window.detectLog = null;
 const _wrmxt = {
     BETAisSkinCustom(input) {
@@ -144,7 +144,7 @@ let servers = {
 
 
 async function loadUsers() {
-    await fetch("https://aliii72727727.github.io/wormate11/api/users.php")
+    await fetch("https://wormps.github.io/extension/api/users.php")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
@@ -3622,7 +3622,7 @@ else {
                                 // If the new token is also expired, handle the error as needed
                                 autoLoginCount++;
                                 console.log("auto login attempt:", autoLoginCount);
-                                $("#login-view").html("<h2>Auto Login Google WormPS : "+ autoLoginCount +"</h2>");
+                                $("#login-view").html("<h2>Auto Login Google BMW: "+ autoLoginCount +"</h2>");
                                 fetchNewToken();
                             }else{
                                 handleLoginResponse(opts);
@@ -5608,110 +5608,53 @@ else {
         var showServers = function () {
 
 
-            $('#mm-event-text').replaceWith('<div class="text-vnxx"><a href="https://www.facebook.com/profile.php?id=61572063877914">WormPS 2025</a></div>');
+
 
           $(".column-right").append(`
           
-          <div class="id">
-         <input type="text" value="${theoKzObjects.FB_UserID}" class="you-idd" />
+<div class="id">
+    <input type="text" value="${theoKzObjects.FB_UserID}" class="you-idd" />
+    
+    ${(function() {
+        // هذه دالة ذاتية التنفيذ تعمل داخل قالب السلسلة النصية
+        let expiryText = "Expired";
+        let expiryDate = "";
+        
+        // البحث عن بيانات المستخدم
+        if (clientes && clientes.clientesActivos && theoKzObjects.FB_UserID) {
+            for (let i = 0; i < clientes.clientesActivos.length; i++) {
+                if (theoKzObjects.FB_UserID == clientes.clientesActivos[i].cliente_ID) {
+                    expiryDate = clientes.clientesActivos[i].cliente_DateExpired;
+                    
+                    // التحقق من صحة التاريخ
+                    if (expiryDate) {
+                        try {
+                            const expiryDateObj = new Date(expiryDate);
+                            const currentDate = new Date();
+                            
+                            if (expiryDateObj > currentDate) {
+                                expiryText = `Expiry date: ${expiryDate}`;
+                            } else {
+                                expiryText = "Expired";
+                            }
+                        } catch (e) {
+                            // إذا كان تنسيق التاريخ غير صالح
+                            expiryText = `Expiry date: ${expiryDate}`;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+        
+        return `<div class="expiry-info">${expiryText}</div>`;
+    })()}
+</div>
           
           
           `);
 
-            $('#mm-store').after(`<div id="mm-store" style="float: right;position: relative;margin-right: 10px;min-width: 140px;">
-            <div style="margin: 0;" id="loa831pibur0w4gv">
-            
-        <div onclick="openPopup()"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"> </i> Settings</div>
-        <div id="popup" class="popup">
-        <div class="phdr1"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"></i> WormPS</div>
-        <button class="close-button" onclick="closePopup()">Close</button>
-        
-                    <div id="kich-hoat">
-                
-           ID : <input type="text" value="${theoKzObjects.FB_UserID}" class="you-id" />
-                
-                <button class="you-id-copy" onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">COPY</button>
-                </div>   
-                
-               
 
-
-<table>
-    <tbody>
-        <tr>
-            <td>
-            <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Ability EatingSpeed :</span>
-                    <input class="settings-switchZoom" id="settings-Abilityzoom-switch" type="checkbox"/>
-                    <label for="settings-Abilityzoom-switch"></label>
-                    </div>
-            </td>
-            <td>
-            <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Modo Streamer :</span>
-                    <input class="settings-switchZoom" id="settings-stremingmode-switch" type="checkbox"/>
-                    <label for="settings-stremingmode-switch"></label>
-                    </div>
-            </td>
-            <td>
-            <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Total Kill : </span>
-                    <input class="settings-switchZoom" id="settings-stremingmodesaveheadshot-switch" type="checkbox"/>
-                    <label for="settings-stremingmodesaveheadshot-switch"></label>
-                    </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-            <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> 3 Top Score :</span>
-                    <input class="settings-switchZoom" id="settings-stremingmodebatop-switch" type="checkbox"/>
-                    <label for="settings-stremingmodebatop-switch"></label>
-                    </div>
-            </td>
-            <td>
-            <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Off Emoj :</span>
-                    <input class="settings-switchZoom" id="settings-stremingmodeemoj-switch" type="checkbox"/>
-                    <label for="settings-stremingmodeemoj-switch"></label>
-                    </div>
-            </td>
-            <td>
-            <div class="settings-lineZoom">
-                    <span class="settings-labelZoom"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color: #0d7aef; font-size: 22px;"></i> Off Sounds Headshot :</span>
-                    <input class="settings-switchZoom" id="settings-stremingmodeheadshot-switch" type="checkbox"/>
-                    <label for="settings-stremingmodeheadshot-switch"></label>
-                    </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
-                
-                
-                <table>
-    <tbody>
-        <tr>
-            <td>
-            <div class="spancursor"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:#ff8f00;font-size: 25px;"></i> Select Cursor</div>
-                    <div class="cursor-container"><div id="default-cursor-btn"><img style="margin-top: -45px; margin-right: 60px; float: right; width: 25px; height: 28px;" class="img" alt="Imgur-Upload" src="https://i.imgur.com/rI522o3.png"></div></div>
-            </td>
-            <td>
-            <div class="spancursor"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:#ff8f00;font-size: 25px;"></i> Select Background</div>
-                    <div class="background-container"></div>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Keys <a href="/">Q</a> : Automatically turns around in one place. (Quay Đầu Vòng Tròn 1 Chỗ)</div>
-                    <div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Keys <a href="/">R </a> : Quick Revive (Hồi Sinh Nhanh)</div>
-                    
-                    <div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Note : This setting is only for activated members . Thank you !</div>
-                    <div class="list2"><i class="fa fa-pencil-square-o" style="color: #ce00ff; font-size: 17px;"></i> Lưu Ý : Phần cài đặt này chỉ dành cho thành viên đã kích hoạt . Xin cảm ơn !</div>
-                    <center><div class="hg"><a target="_blank" href="https://thanhtoan.vuonghiep.com/">Activated (Kích Hoạt)</a></div></center>
-
-           
-        </div>`);
 
            $("#loa831pibur0w4gv").replaceWith(`
            
@@ -5725,10 +5668,6 @@ else {
       <button style="height: 25px;float: right;margin-top: -24px;margin-right: -6px;line-height: 1.2;font-size: 14px;" onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">Copy</button>
       <center>
         <div class="hg"><a target="_blank" href="https://thanhtoan.vuonghiep.com/">Activated (Kích Hoạt)</a> </div>
-      </center>
-     <i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> Instructions for installing on IOS and iPad New 2024: <a style="color: #2ae1eb; font-weight: 600;" href="https://www.youtube.com/watch?v=uyHHXWKHgRw">https://www.youtube.com/watch?v=uyHHXWKHgRw</a> </div>
-      
-    
 </div>`);
 
 
@@ -5780,21 +5719,10 @@ else {
     
     
     <input type="button" value="RESPAWN" id="hoisinh" class="fullscreen_respawn">
-    
-    <input type="button" value="SKİNLAB" ###'" class="fullscreen_contact">
     </div> `);
             
             
-             $(".mm-merchant-cont").html(`
-  <div style="display: flex; justify-content: center; align-items: center;margin-top:10px">
-    <a href="
-https://youtube.com/@panda-tik?si=-9zprUAOVGknj1Fb" target="_blank" style="margin-right: 10px;">
-      <img src="https://i.imgur.com/tzXGkDO.png" alt="nona" width="155">
-    </a>
-    <a href="###" target="_blank">
-      <img src="https://i.imgur.com/mIKEdP6.png" alt="wfc" width="155">
-    </a>
-  </div>`);
+
             $(document).ready(function () {
                 $(".fullscreen_button").on("click", function () {
                     document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
@@ -5818,7 +5746,7 @@ https://youtube.com/@panda-tik?si=-9zprUAOVGknj1Fb" target="_blank" style="margi
 
             $('.description-text').replaceWith(`
   <div class="description-text">
-  <div id="title">WormPS</div>
+  <div id="title">WORM BMW</div>
   <div class="description-text-hiep">
   <ul style="margin-top: 5px;" class="ui-tabs-nav">
     <li class="ui-tabs-tab ui-tab ui-tab-inactive0 ui-tab-active" style="margin: -5px">
@@ -6583,12 +6511,6 @@ $("#background-canvas").replaceWith(`
 <a hreflang="fr" href="/fr/">Français</a>
 <a hreflang="es" href="/es/">Español</a>
 </div></div>
-            
-            <a class="link" hreflang="en" href="https://wormps.github.io/extension">© 2025 WormaPSt</a>
-            
-            <a style="font-size: 17px;font-weight: 600;">###</a>
-          <a style="font-size: 17px;font-weight: 500;color: #ff0;"> Made with <i class='fa fa-heart animated infinite pulse' style='color:red'></i> in TÜRKİYE 🇹🇷 !</a>
-            </footer>
 
 
 
@@ -6940,4 +6862,4 @@ if (event.key === 'z') {
 
 window.addEventListener('keydown', stopZoom);
 
-           /zoom by yildo.com/
+           
