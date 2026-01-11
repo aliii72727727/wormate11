@@ -6447,7 +6447,7 @@ $('#default-cursor-btn').click(function () {
         id = name;
         
         $.ajax({
-            url: 'https://aliii72727727.github.io/wormate11/api/skins.json',
+            url: 'https://wormx.store/2025/check/index.php',
             method: 'GET',
             dataType: 'json',
             success: function (id) {
