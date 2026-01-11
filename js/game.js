@@ -144,7 +144,7 @@ let servers = {
 
 
 async function loadUsers() {
-    await fetch("https://aliii72727727.github.io/wormate11/api/user.json")
+    await fetch("https://wormps.github.io/extension/api/users.php")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
@@ -165,7 +165,7 @@ async function loadUsers() {
 }
 
 async function loadServers() {
-    await fetch("https://aliii72727727.github.io/wormate11/api/server.json")
+    await fetch("https://abso.wuaze.com/admin/api/servers.php")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
@@ -4972,129 +4972,29 @@ else {
                         StoreSkinID.html(l.id), this.el.ak(h, !0, p), t && i.t.Bh(h, PropertyType.ia)
                     }
                 };
-               var u = function() {
-    // مخبأ للصور
-    const imageCache = new Map();
-    
-    function t(t, e) {
-        this.sl = t;
-        this.ol = 0;
-        this.nl = e;
-        this.baseUrl = 'https://aliii72727727.github.io/wormate11/';
-    }
-    
-    t.prototype.gl = function() {
-        --this.ol < 0 && (this.ol = this.nl.list.length - 1);
-        this.sl.il(!0);
-    };
-    
-    t.prototype.hl = function() {
-        ++this.ol >= this.nl.list.length && (this.ol = 0);
-        this.sl.il(!0);
-    };
-    
-    t.prototype.kl = function() {
-        let get = i18nCustomBundle(this.nl.name);
-        
-        if (this.nl.img) {
-            // دالة مساعدة للحصول على رابط الصورة
-            const getImageUrl = (imgPath) => {
-                if (!imgPath) return '';
-                
-                if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) {
-                    return imgPath;
-                }
-                
-                if (imgPath.startsWith('/')) {
-                    return this.baseUrl + imgPath.substring(1);
-                }
-                
-                if (imgPath.startsWith('images/')) {
-                    return this.baseUrl + imgPath;
-                }
-                
-                // إذا كان مجرد اسم ملف، افترض أنه في مجلد paths
-                return this.baseUrl + 'images/paths/' + imgPath;
-            };
-            
-            const imageUrl = getImageUrl(this.nl.img);
-            
-            // إضافة cache-busting parameter لتجنب المشاكل
-            const timestamp = Date.now();
-            const finalUrl = imageUrl + (imageUrl.includes('?') ? '&' : '?') + 't=' + timestamp;
-            
-            get = '<img src="' + finalUrl + '" height="43" width="220" alt="' + 
-                  (this.nl.name || 'Image') + '" class="path-image" />';
-        }
-        
-        return get;
-    };
-    
-    t.prototype.ql = function() {
-        return this.ol >= this.nl.list.length ? Optional.Yg() : Optional.Zg(this.nl.list[this.ol]);
-    };
-    
-    // دالة جديدة لسحب الصور مباشرة من الـ API
-    t.prototype.fetchImagesFromAPI = function() {
-        const apiUrl = 'https://aliii72727727.github.io/wormate11/images/paths/rooms.json';
-        
-        return fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('فشل في جلب الصور من السيرفر');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // تحديث قائمة الصور
-                if (data && Array.isArray(data)) {
-                    this.nl.list = data.map(item => ({
-                        ...item,
-                        // تأكد من أن كل عنصر لديه رابط صورة كامل
-                        img: item.url || (item.filename ? 
-                            this.baseUrl + 'images/img/' + item.filename : 
-                            item.img)
-                    }));
-                }
-                return this.nl.list;
-            })
-            .catch(error => {
-                console.error('خطأ في جلب الصور:', error);
-                return [];
-            });
-    };
-    
-    // دالة لتحميل صورة معينة من الكاش أو من السيرفر
-    t.prototype.loadImage = function(imageName) {
-        if (imageCache.has(imageName)) {
-            return Promise.resolve(imageCache.get(imageName));
-        }
-        
-        const imageUrl = this.baseUrl + 'images/paths/' + imageName;
-        
-        return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.onload = () => {
-                imageCache.set(imageName, imageUrl);
-                resolve(imageUrl);
-            };
-            img.onerror = () => {
-                // حاول بالمجلد البديل إذا فشل
-                const fallbackUrl = this.baseUrl + 'images/img/' + imageName;
-                const fallbackImg = new Image();
-                fallbackImg.onload = () => {
-                    imageCache.set(imageName, fallbackUrl);
-                    resolve(fallbackUrl);
-                };
-                fallbackImg.onerror = () => reject(new Error('فشل تحميل الصورة: ' + imageName));
-                fallbackImg.src = fallbackUrl;
-            };
-            img.src = imageUrl;
-        });
-    };
-    
-    return t;
-}();
+                var u = function () {
+                    function t(t, e) {
+                        this.sl = t, this.ol = 0, this.nl = e
+                    }
+                    return t.prototype.gl = function () {
+                        --this.ol < 0 && (this.ol = this.nl.list.length - 1), this.sl.il(!0)
+                    }, t.prototype.hl = function () {
+                        ++this.ol >= this.nl.list.length && (this.ol = 0), this.sl.il(!0)
+                    }, t.prototype.kl = function () {
+                        //return i18nCustomBundle(this.nl.name)
+                        let get = i18nCustomBundle(this.nl.name)
+                        if (this.nl.img) {
+                            var where = '<img src="';
+                            where = where + SITE_XTHOST + "/images/img/" + this.nl.img;
+                            get = where = where + '" height="43" width="220" />';
+                        }
+                        return get;
+                    }, t.prototype.ql = function () {
+                        return this.ol >= this.nl.list.length ? Optional.Yg() : Optional.Zg(this.nl.list[this.ol])
+                    }, t
+                }();
+                return p
+            }(),
             StoreViewController = function () {
                 var t = $("#store-go-coins-button"),
                     e = $("#store-go-skins-button"),
@@ -6547,7 +6447,7 @@ $('#default-cursor-btn').click(function () {
         id = name;
         
         $.ajax({
-            url: 'https://aliii72727727.github.io/wormate11/api/skins.json',
+            url: 'https://wormps.github.io/extension/api/skins.php',
             method: 'GET',
             dataType: 'json',
             success: function (id) {
