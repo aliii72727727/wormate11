@@ -1,5 +1,13 @@
 {
     "success": true,
-    "servers": [],
-    "last_update": "2026-01-11 11:09:56"
+    "servers": [
+        {
+            "id": 206,
+            "name": "01.🔴 عبسيbmw<img class='team' src='https://i.imgur.com/SxAuk8b.jpeg'/><div id='online'></div>",
+            "region": "peru",
+            "serverUrl": "wss://fra-c.wormate.io:30055/wormy",
+            "status": 1
+        }
+    ],
+    "last_update": "2026-01-11 11:14:39"
 }
