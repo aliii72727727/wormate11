@@ -1,5 +1,5 @@
 {
-    "revision": 1768153479,
+    "revision": 1768153983,
     "visibleSkin": [
         1000,
         1001,
@@ -448,7 +448,6 @@
         1430,
         1431,
         1432,
-        1433,
         1434,
         1435,
         1436,
@@ -19351,38 +19350,6 @@
                 "slaze_822_2",
                 "slaze_822_1",
                 "slaze_822_0"
-            ],
-            "glow": [
-                "a_death",
-                "a_death",
-                "a_death",
-                "a_death",
-                "a_death",
-                "a_death",
-                "a_death",
-                "a_death",
-                "a_death"
-            ]
-        },
-        {
-            "id": 1433,
-            "createdAt": "2025-01-24 19:11:19",
-            "expiresAt": "2025-01-27 19:11:19",
-            "guest": false,
-            "nonbuyable": true,
-            "price": 0,
-            "priceBefore": 0,
-            "prime": "c__yllw",
-            "base": [
-                "star_319_8",
-                "star_319_7",
-                "star_319_6",
-                "star_319_5",
-                "star_319_4",
-                "star_319_3",
-                "star_319_2",
-                "star_319_1",
-                "star_319_0"
             ],
             "glow": [
                 "a_death",
