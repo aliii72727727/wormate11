@@ -174,7 +174,6 @@
         1168,
         1169,
         1170,
-        1171,
         1172,
         1173,
         1174,
@@ -466,6 +465,7 @@
         1450,
         1451,
         1452,
+        1453,
         1454,
         1455,
         1456,
@@ -12023,36 +12023,6 @@
                 "a_ivory"
             ]
         },
-        "212": {
-            "id": 1171,
-            "guest": false,
-            "nonbuyable": false,
-            "price": 0,
-            "priceBefore": 0,
-            "prime": "c__yllw",
-            "base": [
-                "arabflag_31_8",
-                "arabflag_31_7",
-                "arabflag_31_6",
-                "arabflag_31_5",
-                "arabflag_31_4",
-                "arabflag_31_3",
-                "arabflag_31_2",
-                "arabflag_31_1",
-                "arabflag_31_0"
-            ],
-            "glow": [
-                "a_death",
-                "a_death",
-                "a_grass",
-                "a_grass",
-                "a_white",
-                "a_white",
-                "a_grass",
-                "a_grass",
-                "a_death"
-            ]
-        },
         "213": {
             "id": 1172,
             "guest": false,
@@ -19071,6 +19041,38 @@
                 "a_death",
                 "a_death",
                 "a_death"
+            ]
+        },
+        "446": {
+            "id": 1453,
+            "createdAt": "2025-01-21 01:40:47",
+            "expiresAt": "2025-01-24 01:40:47",
+            "guest": false,
+            "nonbuyable": true,
+            "price": 0,
+            "priceBefore": 0,
+            "prime": "c__yllw",
+            "base": [
+                "sun_262_8",
+                "sun_262_7",
+                "sun_262_6",
+                "sun_262_5",
+                "sun_262_4",
+                "sun_262_3",
+                "sun_262_2",
+                "sun_262_1",
+                "sun_262_0"
+            ],
+            "glow": [
+                "a_trans",
+                "a_trans",
+                "a_trans",
+                "a_trans",
+                "a_trans",
+                "a_trans",
+                "a_trans",
+                "a_trans",
+                "a_trans"
             ]
         },
         "447": {
