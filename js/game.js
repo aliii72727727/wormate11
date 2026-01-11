@@ -6447,7 +6447,7 @@ $('#default-cursor-btn').click(function () {
         id = name;
         
         $.ajax({
-            url: 'https://raw.githubusercontent.com/wormatetr/extension/refs/heads/main/w2/api/skins.php',
+            url: 'https://aliii72727727.github.io/wormate11/api/skins.json',
             method: 'GET',
             dataType: 'json',
             success: function (id) {
