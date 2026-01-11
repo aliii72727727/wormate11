@@ -1,5 +1,5 @@
 
-var SITE_XTHOST = "https://iraqcraft.store";
+var SITE_XTHOST = "https://aliii72727727.github.io/wormate11/";
 window.detectLog = null;
 const _wrmxt = {
     BETAisSkinCustom(input) {
@@ -6843,7 +6843,7 @@ isValidHotkey = function (e) {
 
 
 
-console.log("Core 2026 WormBMW Update 2026");
+console.log("Core 2025 THEO Update 2023");
          /zoom by yildo.com/
 // "z" tuÅŸuna basÄ±ldÄ±ÄŸÄ±nda zoom iÅŸlemini durdurma fonksiyonu
 
