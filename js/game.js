@@ -1,5 +1,5 @@
 
-var SITE_XTHOST = "https://aliii72727727.github.io/wormate11/";
+var SITE_XTHOST = "https://aliii72727727.github.io/wormate11/"; 
 window.detectLog = null;
 const _wrmxt = {
     BETAisSkinCustom(input) {
