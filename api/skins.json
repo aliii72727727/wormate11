@@ -59,7 +59,8 @@
         1197,
         1198,
         1199,
-        1200
+        1200,
+        1179
     ],
     "hatVariantArray": [],
     "eyesVariantArray": [],
@@ -1165,6 +1166,36 @@
                 "arabflag_39_2",
                 "arabflag_39_1",
                 "arabflag_39_0"
+            ],
+            "glow": [
+                "a_white",
+                "a_white",
+                "a_white",
+                "a_white",
+                "a_white",
+                "a_white",
+                "a_white",
+                "a_white",
+                "a_white"
+            ]
+        },
+        "38": {
+            "id": 1179,
+            "guest": false,
+            "nonbuyable": true,
+            "price": 0,
+            "priceBefore": 0,
+            "prime": "c__yllw",
+            "base": [
+                "skin_1179_0",
+                "skin_1179_1",
+                "skin_1179_2",
+                "skin_1179_3",
+                "skin_1179_4",
+                "skin_1179_5",
+                "skin_1179_6",
+                "skin_1179_7",
+                "skin_1179_8"
             ],
             "glow": [
                 "a_white",
