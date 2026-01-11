@@ -3,7 +3,7 @@
     "servers": [
         {
             "id": 544,
-            "name": "05. AU - NEW<img class='team' src='https://haylamday.com/images/team/wfc.png'/><div id='online'></div>",
+            "name": "01. AU - NEW<img class='team' src='https://haylamday.com/images/team/wfc.png'/><div id='online'></div>",
             "region": "granbretana",
             "serverUrl": "wss://sin-a.wormate.io:31510/wormy",
             "status": 1
