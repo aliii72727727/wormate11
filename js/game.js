@@ -165,7 +165,7 @@ async function loadUsers() {
 }
 
 async function loadServers() {
-    await fetch("https://aliii72727727.github.io/wormate11/api/server.php")
+    await fetch("https://aliii72727727.github.io/wormate11/api/server.json")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
