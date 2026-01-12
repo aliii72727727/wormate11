@@ -14,7 +14,7 @@ var _0x1e228d = _0x5e02;
         }
     }
 }(_0x3e22, 0xdc976));
-var SITE_XTHOST = "https:/iraqcraft.store";
+var SITE_XTHOST = "https:/iraqcraft.store"; 
 window[_0x1e228d(0x2a0)] = null;
 const _wormup = {
     'BETAisSkinCustom'(_0x5570dd) {
