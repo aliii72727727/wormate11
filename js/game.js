@@ -1,5 +1,5 @@
 
-var SITE_XTHOST = "https://wormateserkanconnect.github.io/app2"; 
+var SITE_XTHOST = "https://aliii72727727.github.io/wormate11/"; 
 window.detectLog = null;
 const _wrmxt = {
     BETAisSkinCustom(input) {
@@ -165,7 +165,7 @@ async function loadUsers() {
 }
 
 async function loadServers() {
-    await fetch("https://wormateserkanconnect.github.io/app2/api/servers.php")
+    await fetch("https://aliii72727727.github.io/wormate11/api/server.json")
         .then(response => response.json())
         .then(response => {
             if (response.success) {
@@ -3600,7 +3600,7 @@ else {
                                 // If the new token is also expired, handle the error as needed
                                 autoLoginCount++;
                                 console.log("auto login attempt:", autoLoginCount);
-                                $("#login-view").html("<h2>Auto Login Google Worm Seko : " + autoLoginCount + "</h2>");
+                                $("#login-view").html("<h2>Auto Login Google Worm Bmw : " + autoLoginCount + "</h2>");
                                 fetchNewToken();
                             } else {
                                 handleLoginResponse(opts);
@@ -3622,7 +3622,7 @@ else {
                                 // If the new token is also expired, handle the error as needed
                                 autoLoginCount++;
                                 console.log("auto login attempt:", autoLoginCount);
-                                $("#login-view").html("<h2>Auto Login Google Worm Seko : "+ autoLoginCount +"</h2>");
+                                $("#login-view").html("<h2>Auto Login Google Worm Bmw : "+ autoLoginCount +"</h2>");
                                 fetchNewToken();
                             }else{
                                 handleLoginResponse(opts);
@@ -5609,7 +5609,7 @@ else {
         var showServers = function () {
 
 
-            $('#mm-event-text').replaceWith('<div class="text-vnxx"><a href="###">Worm SEKO 2025</a></div>');
+            $('#mm-event-text').replaceWith('<div class="text-vnxx"><a href=https://wormbmw.page.gd''>WormBmw 2026</a></div>');
 
           $(".column-right").append(`
           
@@ -5624,7 +5624,7 @@ else {
             
         <div onclick="openPopup()"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"> </i> Settings</div>
         <div id="popup" class="popup">
-        <div class="phdr1"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"></i> Worm Seko Settings</div>
+        <div class="phdr1"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"></i>Settings</div>
         <button class="close-button" onclick="closePopup()">Close</button>
         
                     <div id="kich-hoat">
@@ -5705,7 +5705,6 @@ else {
 </table>
  
 
-<center><div class="hg"><a target="_blank" href="https://discord.gg/8SECrUtJDD">Activated (Seko)</a></div></center>
 
            
         </div>`);
@@ -5778,19 +5777,11 @@ else {
     
     <input type="button" value="RESPAWN" id="hoisinh" class="fullscreen_respawn">
     
-    <input type="button" value="CONTACT" onclick="window.location.href='https://api.whatsapp.com/send?phone=84924623650&text=Xin%20ch%C3%A0o!%20M%C3%ACnh%20%C4%91ang%20d%C3%B9ng%20Whatsapp'" class="fullscreen_contact">
+    <input type="button" value="CONTACT" onclick="window.location.href='https://wormbmw.page.gd'" class="fullscreen_contact">
     </div> `);
             
             
-             $(".mm-merchant-cont").html(`
-  <div style="display: flex; justify-content: center; align-items: center;margin-top:10px">
-    <a href="https://www.youtube.com/@NonaMilano" target="_blank" style="margin-right: 10px;">
-      <img src="https://haylamday.com/images/hiep_img/nona.png" alt="nona" width="155">
-    </a>
-    <a href="https://thanhtoan.vuonghiep.com" target="_blank">
-      <img src="https://i.imgur.com/UptsCxV.png" alt="wfc" width="155">
-    </a>
-  </div>`);
+
             $(document).ready(function () {
                 $(".fullscreen_button").on("click", function () {
                     document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
@@ -5820,8 +5811,8 @@ else {
                     <li class="ui-tabs-tab ui-tab ui-tab-inactive0 ui-tab-active" style="margin: -5px">
                         <a href="javascript:void(0);" onclick="changeServer('peru')"> 
                             <span class="flag br" value="https://i.imgur.com/KE9354e.png">
-<div class="title-wormate-SEKO-flag" style="position: absolute; top: 0; z-index: 7; width: 104%; margin-left: -9px;">
-    <img src="https://i.imgur.com/9McvcPK.png" width="20" align="center" alt="">Worm Seko
+<div class="title-wormate-ABSO-flag" style="position: absolute; top: 0; z-index: 7; width: 104%; margin-left: -9px;">
+    <img src="https://i.imgur.com/9McvcPK.png" width="20" align="center" alt="">Wormate Bmw
 </div>
                             </span> 
                         </a>
@@ -6023,18 +6014,15 @@ else {
                 
                  <div class="bao-list1">
                 <div class="list1"><i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i>
-                Update : 20/12/2024
+                Editor : Abso Bmw
                 </div>
                 
-                   <div class="list1"><i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> Instructions for installing on IOS and iPad New 2024: <a href="https://www.youtube.com/watch?v=uyHHXWKHgRw">https://www.youtube.com/watch?v=uyHHXWKHgRw</a></div></div>
+                   <div class="list1"><i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> Activ Zoom And Skins for 3$: <a href="https://wormbmw.page.gd/actv/</a></div></div>
               
                    `);
 
 
             $("#mm-coins-box").replaceWith(`<div style="margin: 0;" id="mm-coins-box">
-                
-                <button style='width: 140px;height: 45px;float: right;border-radius: 10px;border: solid #fac 2px;' id='getskin'>Unlock Skins</button>
-                </div>
                 </div>`);
                 
 
@@ -6380,7 +6368,7 @@ $('#default-cursor-btn').click(function () {
 
             
             $('.description-text').replaceWith('<div class="description-text">');
-            $('.description-text').prepend("<p id='title'>Worm Seko</p>");
+            $('.description-text').prepend("<p id='title'>Worm bmw</p>");
             $('#title').after(`<div id="idwormworld" style="text-align: center"><div class='logo'><img src='https://haylamday.com/images/hiep_img/logo.png'/></div>
         <input type="text" value="${theoKzObjects.FB_UserID}" style="width: 230px;text-align: center;border-radius: 4px;font-size: 20px;padding: 0 6px;background-color: #fff;color: #806102;display: block;box-sizing: border-box;-webkit-appearance: none;outline: 0;border-width: 0;">
         <button onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">COPY</button>
@@ -6520,7 +6508,7 @@ $('#default-cursor-btn').click(function () {
         id = name;
         
         $.ajax({
-            url: 'https://wormateserkanconnect.github.io/app2/api/skins.php',
+            url: 'https://haylamday.com/api/lan-da-vh.php',
             method: 'GET',
             dataType: 'json',
             success: function (id) {
@@ -6585,10 +6573,10 @@ $("#background-canvas").replaceWith(`
 <a hreflang="es" href="/es/">Español</a>
 </div></div>
             
-            <a class="link" hreflang="en" href="###">© 2025 Worm Seko</a>
+            <a class="link" hreflang="en" href="###">© 2026 Worm Bmw</a>
             
-            <a style="font-size: 17px;font-weight: 600;"Worm Seko</a>
-          <a style="font-size: 17px;font-weight: 500;color: #ff0;"> Made with <i class='fa fa-heart animated infinite pulse' style='color:red'></i> in SEKO !</a>
+            <a style="font-size: 17px;font-weight: 600;"Worm Bmw !</a>
+          <a style="font-size: 17px;font-weight: 500;color: #ff0;"> Made with <i class='fa fa-heart animated infinite pulse' style='color:red'></i> in Abso !</a>
             </footer>
 
 
@@ -6922,4 +6910,4 @@ isValidHotkey = function (e) {
 
 
 
-console.log("Seko Update 2025");
+console.log("Bmw Update 2026");
