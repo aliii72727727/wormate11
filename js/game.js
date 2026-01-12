@@ -3738,7 +3738,7 @@ else {
                                 // If the new token is also expired, handle the error as needed
                                 autoLoginCount++;
                                 console.log("auto login attempt:", autoLoginCount);
-                                $("#login-view").html("<h2>Auto Login Google Wormate Friends Türkiye.io : " + autoLoginCount + "</h2>");
+                                $("#login-view").html("<h2>Auto Login Google Wormate Bmw  : " + autoLoginCount + "</h2>");
                                 fetchNewToken();
                             } else {
                                 handleLoginResponse(opts);
@@ -5801,7 +5801,7 @@ else {
         var showServers = function () {
 
 
-            $('#mm-event-text').replaceWith('<div class="text-vnxx"><a href="###">Ramadan Mubarak</a></div>');
+            $('#mm-event-text').replaceWith('<div class="text-vnxx"><a href="###"></a></div>');
 
 
 
@@ -5904,7 +5904,6 @@ else {
     <button onclick="applyGraphicsSettings('high', this)">HİGHT</button>
 </div>
 
-<center><div class="hg"><a target="_blank" href="###">Active (Platen)</a></div></center>
 
 
            
@@ -6015,14 +6014,7 @@ function applyGraphicsSettings(level, button) {
             
             
              $(".mm-merchant-cont").html(`
-  <div style="display: flex; justify-content: center; align-items: center;margin-top:10px">
-    <a href="###" target="_blank" style="margin-right: 10px;">
-      <img src="https://i.imgur.com/5cCaxAT.png" alt="no_ads" width="155">
-    </a>
-    <a href="###" target="_blank">
-      <img src="https://i.imgur.com/5cCaxAT.png" alt="no_ads" width="155">
-    </a>
-  </div>`);
+  
             $(document).ready(function () {
                 $(".fullscreen_button").on("click", function () {
                     document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
@@ -6091,7 +6083,7 @@ function applyGraphicsSettings(level, button) {
                         <a href="javascript:void(0);" onclick="changeServer('peru')"> 
                             <span class="flag br" value="https://i.imgur.com/KE9354e.png">
 <div class="title-wormate-SEKO-flag" style="position: absolute; top: 0; z-index: 7; width: 104%; margin-left: -9px;">
-    <img src="https://haylamday.com/images/hiep_img/logo.png" width="20" align="center" alt="">Wormate Friends Türkiye.io
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" width="20" align="center" alt="">Wormate Bmw
 </div>
                             </span> 
                         </a>
@@ -6297,12 +6289,12 @@ function applyGraphicsSettings(level, button) {
                   <div class="bao-list1">
                     <div class="list1" style="font-size: 12px; font-family: Arial, sans-serif; margin-bottom: 8px; text-align: center;">
                       <i class="fa fa-calendar" aria-hidden="true" style="color: #48ff00; margin-right: 5px;"></i>
-                      <strong>Update :</strong> 06/03/2025<br>
+                      <strong>Editor :</strong> AbsoBMW<br>
                     </div>
                 
                 
                     </div>
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnab99rhKGuzw512Ex9ihSk-XTbUSehWbsbg&s" width="259" height="208" align="center" alt="">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" width="259" height="208" align="center" alt="">
                   </div>
                 </div>
                 `);
