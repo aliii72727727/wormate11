@@ -1,13 +1,14 @@
 
-var SITE_XTHOST = "https://aliii72727727.github.io/wormate11/";  
+
+var var_weburl = "https://wormateserkanconnect.github.io/app2";
 window.detectLog = null;
-const _wrmxt = {
+const __yildowft = {
     BETAisSkinCustom(input) {
         var templateStartAlphaRegex = /[a-zA-Z]/;
         return "string" === typeof input && templateStartAlphaRegex.test(input);
     },
     testSkinCustom: function (value) {
-        return _wrmxt.BETAisSkinCustom(value) ? 34 || 33 : value;
+        return __yildowft.BETAisSkinCustom(value) ? 34 || 33 : value;
     },
     testSkinMod: function (a22) {
         return 399 <= a22 && 999 > a22;
@@ -19,12 +20,12 @@ const _wrmxt = {
         return "" !== id && null !== id && void 0 !== id && !isNaN(id);
     },
     validInput: function (e) {
-        if (!_wrmxt.testSkinMod(e) && !_wrmxt.BETAisSkinCustom(e)) {
+        if (!__yildowft.testSkinMod(e) && !__yildowft.BETAisSkinCustom(e)) {
             return e;
         }
         try {
             let duration = $("#inputReplaceSkin").val();
-            return encodeURI(_wrmxt.isNumberValid(duration) ? duration : 35);
+            return encodeURI(__yildowft.isNumberValid(duration) ? duration : 35);
         } catch (q) {
             return encodeURI(35);
         }
@@ -32,6 +33,55 @@ const _wrmxt = {
     aload: false,
     aId: 0
 };
+
+
+(function () {
+    function loadPixi(callback) {
+        if (typeof PIXI === "undefined") {
+            var script = document.createElement("script");
+            script.src = "https://pixijs.download/release/pixi.js";
+            script.type = "text/javascript";
+            script.onload = function () {
+                console.log("PIXI.js yÃ¼klendi.");
+                callback();
+            };
+            script.onerror = function () {
+                console.error("PIXI.js yÃ¼klenemedi!");
+            };
+            document.head.appendChild(script);
+        } else {
+            console.log("PIXI.js zaten yÃ¼klÃ¼.");
+            callback();
+        }
+    }
+
+    loadPixi(function () {
+        initializeGame();
+    });
+})();
+
+
+function initializeGame() {
+    // Yeni PIXI.js uygulamasÄ± oluÅŸtur
+    let app = new PIXI.Application({
+        width: window.innerWidth,  // Pencere geniÅŸliÄŸi kadar
+        height: window.innerHeight, // Pencere yÃ¼ksekliÄŸi kadar
+        backgroundColor: 0x000000  // Siyah arkaplan
+    });
+
+    // Oyunu HTML iÃ§ine ekle
+    document.body.appendChild(app.view);
+
+    // KÄ±rmÄ±zÄ± bir daire Ã§iz
+    let circle = new PIXI.Graphics();
+    circle.beginFill(0xff0000);
+    circle.drawCircle(400, 300, 50); // (x, y, yarÄ±Ã§ap)
+    circle.endFill();
+
+    // Sahneye ekle
+    app.stage.addChild(circle);
+}
+
 
 var inputReplaceSkin = localStorage.getItem('inputReplaceSkin');
 var hoisinhnhanh;
@@ -54,17 +104,19 @@ var theoEvents = {
         pxy: 110
     },
 }
-var theoKzObjects = {
+
+
+
+var theowftObjects = {
     FB_UserID: "",
     smoothCamera: .5,
     eat_animation: .0025,
     flag: "https://i.imgur.com/EkbSd65.png",
     PortionSize: localStorage.PotenciadorSize || 2,
     PortionAura: localStorage.PotenciadorAura || 1.2,
-    PortionTransparent: .8,
-    FoodTransparent: .3,
+    PortionTransparent: 0.8,
+    FoodTransparent: 0.3,
     ModeStremer: false,
-
     ModeStremerbatop: false,
     ModeStremeremoj: false,
     ModeStremerheadshot: false,
@@ -93,18 +145,18 @@ saveGameLocal = localStorage.getItem("SaveGameXT");
 if (saveGameLocal && "null" !== saveGameLocal) {
     let t = JSON.parse(saveGameLocal);
     for (let e in t)
-        theoKzObjects[e] = t[e]
+        theowftObjects[e] = t[e]
 }
-theoKzObjects.loading = true;
+theowftObjects.loading = true;
 
 const PhoneChecked = function () {
     let k = false;
-    theoKzObjects.mobile = false;
+    theowftObjects.mobile = false;
     var q = navigator.userAgent || navigator.vendor || window.opera;
     if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(q) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(q.substr(0,
         4))) {
         /** @type {boolean} */
-        theoKzObjects.mobile = true;
+        theowftObjects.mobile = true;
         k = true;
     }
     return k;
@@ -122,11 +174,11 @@ const RechekingPhone = function () {
 const loadJoy = function (found) {
     let q;
     try {
-        console.log(found);
-        return theoKzObjects.gamePad || (theoKzObjects.gamePad = theoEvents.joystick), RechekingPhone() && (found || theoKzObjects.gamePad.checked) && (q = nipplejs.create(theoKzObjects.gamePad), q.on("move", function (canCreateDiscussions, obj) {
+      //  console.log(found);
+        return theowftObjects.gamePad || (theowftObjects.gamePad = theoEvents.joystick), RechekingPhone() && (found || theowftObjects.gamePad.checked) && (q = nipplejs.create(theowftObjects.gamePad), q.on("move", function (canCreateDiscussions, obj) {
             /** @type {number} */
             theoEvents.eventoPrincipal.sk = obj.angle.radian <= Math.PI ? -1 * obj.angle.radian : Math.PI - (obj.angle.radian - Math.PI);
-            console.log(obj);
+           // console.log(obj);
         })), q;
     } catch (jiveUser) {
         console.log(jiveUser);
@@ -142,48 +194,48 @@ let servers = {
     Api_listServer: []
 }
 
+// ğŸ“Œ KullanÄ±cÄ±larÄ± yÃ¼kleyen fonksiyon
+const loadUsers = async () => {
+    try {
+        const response = await fetch("https://aliii72727727.github.io/wormate11/api/user.json");
+        const data = await response.json();
 
-async function loadUsers() {
-    await fetch("https://aliii72727727.github.io/wormate11/api/user.json")
-        .then(response => response.json())
-        .then(response => {
-            if (response.success) {
-                let allClients = response.Users;
+        if (data.success) {
+            clientes.clientesActivos = data.Users.filter(cliente => cliente.cliente_ID);
+        } else {
+            clientes.clientesActivos = [];
+            clientes.clientesVencidos = [];
+            alert("An error occurred while loading clients");
+        }
+    } catch (error) {
+        console.error("Error loading users:", error);
+        alert("Failed to load users.");
+    }
+};
 
-                clientes.clientesActivos = allClients.filter(cliente => {
-                    return cliente.cliente_ID
-                });
+// ğŸ“Œ SunucularÄ± yÃ¼kleyen fonksiyon
+const loadServers = async () => {
+    try {
+        const response = await fetch("https://wormateserkanconnect.github.io/app2/api/servers.php");
+        const data = await response.json();
 
-            } else {
-                clientes = {
-                    clientesVencidos: [],
-                    clientesActivos: []
-                };
-                alert("An error occurred while loading clients");
-            }
-        })
-}
+        if (data.success) {
+            servers.Api_listServer = data.servers.filter(server => server.serverUrl);
+        } else {
+            servers.Api_listServer = [];
+            alert("An error occurred while loading the servers");
+        }
+    } catch (error) {
+        console.error("Error loading servers:", error);
+        alert("Failed to load servers.");
+    }
+};
 
-async function loadServers() {
-    await fetch("https://aliii72727727.github.io/wormate11/api/server.json")
-        .then(response => response.json())
-        .then(response => {
-            if (response.success) {
-                let allServers = response.servers;
-
-                servers.Api_listServer = allServers.filter(server_ => {
-                    return server_.serverUrl
-                });
-            } else {
-                servers = {
-                    Api_listServer: []
-                };
-                alert("An error occurred while loading the servers");
-            }
-        })
-}
+// ğŸ“Œ KullanÄ±cÄ± ve sunucu verilerini yÃ¼kle
 loadUsers();
 loadServers();
+    
+
 
 
 $(".store-view-cont").append('<div id="idReplaceSkin"></div>');
@@ -195,7 +247,7 @@ const ctx = {
             fontSize: 12,
             lineJoin: "round",
             stroke: "#EFFA45",
-            fontFamily: "PTSans, sans-serif",
+            fontFamily: "sans-serif",
             fontWeight: "bold"
 
         }),
@@ -212,64 +264,64 @@ const ctx = {
         }),
         morado: new PIXI.TextStyle({
             align: "center",
-            fill: "#B37400",
-            fontSize: 8,
+            fill: "#FFFF00",
+            fontSize: 10,
             lineJoin: "round",
-            stroke: "#B37400",
+            stroke: "#FAA845",
             strokeThickness: 1,
             whiteSpace: "normal",
             fontFamily: "sans-serif",
-            fontWeight: "0",
+            fontWeight: "bold",
             wordWrap: true
         }),
         morado1: new PIXI.TextStyle({
             align: "center",
-            fill: "#FFFFFF",
-            fontSize: 7,
+            fill: "#FFF",
+            fontSize: 10,
             lineJoin: "round",
-            stroke: "#FFFFFF",
+            stroke: "#FAA845",
             strokeThickness: 1,
             whiteSpace: "normal",
             fontFamily: "sans-serif",
-            fontWeight: "0",
+            fontWeight: "bold",
             wordWrap: true
         }),
         amarillo: new PIXI.TextStyle({
             align: "center",
-            fill: "#B37400",
-            fontSize: 8,
+            fill: "#FFFF00",
+            fontSize: 10,
             lineJoin: "round",
-            stroke: "#8C5400",
+            stroke: "#FAA845",
             strokeThickness: 1,
             whiteSpace: "normal",
             fontFamily: "sans-serif",
-            fontWeight: "0",
+            fontWeight: "bold",
             wordWrap: true
         }),
         amarillo1: new PIXI.TextStyle({
             align: "center",
-            fill: "#FFFFFF",
-            fontSize: 7,
+            fill: "#FFF",
+            fontSize: 10,
             lineJoin: "round",
-            stroke: "#FFFFFF",
+            stroke: "#FAA845",
             strokeThickness: 1,
             whiteSpace: "normal",
             fontFamily: "sans-serif",
-            fontWeight: "0",
+            fontWeight: "bold",
             wordWrap: true
         }),
         
         
         anheadshot: new PIXI.TextStyle({
             align: "center",
-            fill: "#8C5400",
+            fill: "#FFF",
             fontSize: 0,
             lineJoin: "round",
-            stroke: "#8C5400",
+            stroke: "#FAA845",
             strokeThickness: 1,
             whiteSpace: "normal",
             fontFamily: "sans-serif",
-            fontWeight: "0",
+            fontWeight: "bold",
             wordWrap: true
         }),
         
@@ -282,28 +334,88 @@ const ctx = {
             strokeThickness: 1,
             whiteSpace: "normal",
             fontWeight: "bold",
-            fontFamily: "PTSans, sans-serif",
+            fontFamily: "sans-serif",
             wordWrap: true
         }),
     }
 };
-ctx.clock = PIXI.Sprite.fromImage("https://asserts.wormworld.io/images/clock.png");
+// Saat gÃ¶rÃ¼ntÃ¼sÃ¼nÃ¼ ekleyelim
+ctx.clock = PIXI.Sprite.from("https://i.imgur.com/v6szE9c.png");
 ctx.clock.width = 100;
 ctx.clock.height = 100;
 ctx.clock.x = -50;
 ctx.clock.y = -50;
 
-
-
-
-/*server name */
-ctx.value_server = new PIXI.Text("W-SEKO", ctx.fontStyle.name);
+// **Server AdÄ±**
+ctx.value_server = new PIXI.Text("WFTR.İO", ctx.fontStyle.name);
 ctx.value_server.x = 25;
 ctx.value_server.y = -18;
 
 
 
+//---------------------------------------------------------
 
+
+
+// Yeni TOPHS BaÅŸlÄ±ÄŸÄ±nÄ± Ekle
+ctx.value_tophs = new PIXI.Text("--HIGH SCORE--", ctx.fontStyle.name);
+ctx.value_tophs.x = 20;
+ctx.value_tophs.y = 150;
+ctx.value_tophs.style.fontSize = 10; // KÃ¼Ã§Ã¼k font boyutu
+ctx.value_tophs.style.fill = "#FFFFFF"; // Beyaz renk
+
+//----------------------------------------------------------
+// Yeni 1. Oyuncu BaÅŸlÄ±ÄŸÄ±nÄ± Ekle
+ctx.value_top1 = new PIXI.Text("01. PLATEN ( 10.M ) ", ctx.fontStyle.name);
+ctx.value_top1.x = 12;
+ctx.value_top1.y = 170;
+ctx.value_top1.style.fontSize = 8; // KÃ¼Ã§Ã¼k font boyutu
+ctx.value_top1.style.fill = "#FFFFFF"; // Beyaz renk
+
+//----------------------------------------------------------
+// Yeni 2. Oyuncu BaÅŸlÄ±ÄŸÄ±nÄ± Ekle
+ctx.value_top2 = new PIXI.Text("02. ---", ctx.fontStyle.name);
+ctx.value_top2.x = 12;
+ctx.value_top2.y = 185;
+ctx.value_top2.style.fontSize = 8; // KÃ¼Ã§Ã¼k font boyutu
+ctx.value_top2.style.fill = "#FFFFFF"; // Beyaz renk
+
+//----------------------------------------------------------
+// Yeni 3. Oyuncu BaÅŸlÄ±ÄŸÄ±nÄ± Ekle
+ctx.value_top3 = new PIXI.Text("3. ---", ctx.fontStyle.name);
+ctx.value_top3.x = 12;
+ctx.value_top3.y = 200;
+ctx.value_top3.style.fontSize = 8; // KÃ¼Ã§Ã¼k font boyutu
+ctx.value_top3.style.fill = "#FFFFFF"; // Beyaz renk
+
+//----------------------------------------------------------
+// Yeni 4. Oyuncu BaÅŸlÄ±ÄŸÄ±nÄ± Ekle
+ctx.value_top4 = new PIXI.Text("4. ---", ctx.fontStyle.name);
+ctx.value_top4.x = 12;
+ctx.value_top4.y = 215;
+ctx.value_top4.style.fontSize = 8; // KÃ¼Ã§Ã¼k font boyutu
+ctx.value_top4.style.fill = "#FFFFFF"; // Beyaz renk
+
+//----------------------------------------------------------
+// Yeni 5. Oyuncu BaÅŸlÄ±ÄŸÄ±nÄ± Ekle
+ctx.value_top5 = new PIXI.Text("5. ---", ctx.fontStyle.name);
+ctx.value_top5.x = 12;
+ctx.value_top5.y = 230;
+ctx.value_top5.style.fontSize = 8; // KÃ¼Ã§Ã¼k font boyutu
+ctx.value_top5.style.fill = "#FFFFFF"; // Beyaz renk
+
+
+
+
+//---------------------------------------------------------
+
+
+
+
+
+
+
+// **Headshot & Kill SayaÃ§larÄ±**
 ctx.label_hs = new PIXI.Text("HS", ctx.fontStyle.amarillo);
 ctx.value1_hs = new PIXI.Text("0", ctx.fontStyle.amarillo);
 
@@ -311,82 +423,59 @@ ctx.label_kill = new PIXI.Text("KL", ctx.fontStyle.morado);
 ctx.value1_kill = new PIXI.Text("0", ctx.fontStyle.morado);
 
 
+// **ModeStremersaveheadshot aktifse 2. deÄŸerleri oluÅŸtur**
+ctx.value2_hs = new PIXI.Text("", ctx.fontStyle.amarillo);
+ctx.value2_kill = new PIXI.Text("", ctx.fontStyle.morado);
 
-if(theoKzObjects.ModeStremersaveheadshot){
-                  ctx.value2_hs = new PIXI.Text("", ctx.fontStyle.amarillo1);  
-ctx.value2_kill = new PIXI.Text("", ctx.fontStyle.morado1);      
-                }
-                
-                else{
-                  ctx.value2_hs = new PIXI.Text("", ctx.fontStyle.amarillo1);  
-ctx.value2_kill = new PIXI.Text("", ctx.fontStyle.morado1); 
-                };
+// **ElemanlarÄ±n konumlandÄ±rÄ±lmasÄ±**
+ctx.label_hs.position.set(65, 100);
+ctx.value1_hs.position.set(65, 116);
+ctx.value2_hs.position.set(65, 133);
+ctx.label_kill.position.set(15, 100);
+ctx.value1_kill.position.set(15, 116);
+ctx.value2_kill.position.set(15, 133);
 
+// **SayacÄ±n UI dÃ¼zenlemesi**
+ctx.containerCountInfo = new PIXI.Container();
+ctx.containerCountInfo.position.set(-45, -52);
+ctx.containerCountInfo.addChild(
+    ctx.value_server, 
+    ctx.value_tophs, 
+    ctx.value_top1, 
+    ctx.value_top2, 
+    ctx.value_top3, 
+    ctx.value_top4, 
+    ctx.value_top5,
+    ctx.label_hs, ctx.value1_hs, ctx.value2_hs, 
+    ctx.label_kill, ctx.value1_kill, ctx.value2_kill
+);
 
-
-
-ctx.label_hs.x = 65;
-ctx.label_hs.y = 100;
-
-ctx.label_kill.x = 15;
-ctx.label_kill.y = 100;
-
-
-ctx.value1_hs.x = 65;
-ctx.value1_hs.y = 116;
-
-
-
-ctx.value1_kill.x = 15;
-ctx.value1_kill.y = 116;
-
-
-ctx.value2_hs.x = 65;
-ctx.value2_hs.y = 133;
-
-ctx.value2_kill.x = 15;
-ctx.value2_kill.y = 133;
-
-
-
-//if (!theoKzObjects.SaveGameXT) {
-//ctx.value2_hs.alpha = 0;
-//ctx.value2_kill.alpha = 0;
-//}
-ctx.containerCountInfo = new PIXI.Container;
-ctx.containerCountInfo.x = -45;
-ctx.containerCountInfo.y = -52;
-ctx.containerCountInfo.addChild(ctx.value_server);
-
-ctx.containerCountInfo.addChild(ctx.label_hs);
-ctx.containerCountInfo.addChild(ctx.value1_hs);
-ctx.containerCountInfo.addChild(ctx.value2_hs);
-ctx.containerCountInfo.addChild(ctx.label_kill);
-ctx.containerCountInfo.addChild(ctx.value1_kill);
-ctx.containerCountInfo.addChild(ctx.value2_kill);
-
-ctx.imgServerbase = PIXI.Texture.fromImage("https://i.imgur.com/EkbSd65.png");
-ctx.borderurl = PIXI.Texture.fromImage("https://i.imgur.com/wYJAfmO0.png");
-
-ctx.onclickServer = PIXI.Texture.fromImage(theoKzObjects.flag);
+// **Sunucu GÃ¶rselleri**
+ctx.imgServerbase = PIXI.Texture.from("https://i.imgur.com/EkbSdS65.png");
+ctx.borderurl = PIXI.Texture.from("https://i.imgur.com/wYJAfmO0.png");
+ctx.onclickServer = PIXI.Texture.from(theowftObjects.flag);
 
 ctx.containerImgS = new PIXI.Sprite(ctx.imgServerbase);
 ctx.containerImgS.anchor.set(0.5);
-ctx.containerImgS.x = 0;
-ctx.containerImgS.y = -10;
+ctx.containerImgS.position.set(0, -10);
 ctx.containerImgS.width = 25;
 ctx.containerImgS.height = 20;
+
 ctx.borderImg = new PIXI.Sprite(ctx.borderurl);
 ctx.borderImg.anchor.set(0.5);
-ctx.borderImg.x = -2;
-ctx.borderImg.y = 78;
+ctx.borderImg.position.set(-2, 78);
 ctx.borderImg.width = 110;
 ctx.borderImg.height = 60;
-ctx.setServer = function (name) {
-    ctx.value_server.text = name || "WFC"
+
+// **Server ismini deÄŸiÅŸtiren fonksiyon**
+ctx.setServer = function (name = "WFT") {
+    ctx.value_server.text = name;
 };
+
+
+
 ctx.setCountGame = function (killHTML, headShotHTML, totalKills, totalHeadshots) {
-    //if (!theoKzObjects.SaveGameXT) {
+    //if (!theowftObjects.SaveGameXT) {
     //  ctx.value2_hs.alpha = 0;
     //  ctx.value2_kill.alpha = 0;
     //}
@@ -396,7 +485,7 @@ ctx.setCountGame = function (killHTML, headShotHTML, totalKills, totalHeadshots)
     ctx.value1_kill.text = killHTML;
     ;
 
-if(theoKzObjects.ModeStremersaveheadshot){
+if(theowftObjects.ModeStremersaveheadshot){
                   ctx.value2_hs.text = totalHeadshots;
                   ctx.value2_kill.text = totalKills;
                 }
@@ -502,22 +591,25 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
             t.Modernizr = h
         }(window, document), Modernizr.websockets && Modernizr.canvas && Modernizr.canvastext
     }
-    /*add functions new*/
+
+    
+    /*Ä°temlerin renkleri ve koordinatlar yerleri.*/
     function powerUpsTimer(msg, i, data) {
         const timePWR = [38, 38, 38, 120, 38, 25, 38];
-        const colors = ["#FFD500", '#FFC75A', '#00B2ED', "#FF4544", '#0094D7', '#CCCF81', '#ff0999'];
+        const colors = ["#FFFFFF", '#FFFFFF', '#FFFFFF', "#FFFFFF", '#FFFFFF', '#FFFFFF', '#FFFFFF'];
         let countTime = timePWR[i] - parseInt((0.99 == data ? 1 : data) * timePWR[i] / 1);
+        
         const inputTextV1 = new PIXI.TextStyle({
             "align": "center",
             "fill": colors[i],
-            "fontSize": 25,
+            "fontSize": 20,
             "lineJoin": 'round',
             "whiteSpace": 'normal',
             "wordWrap": true,
-            
-            "fontFamily": "PTSans, sans-serif",
+            "fontFamily": "sans-serif",
             "fontWeight": 'bold'
         });
+        
         let changePWR = 'pwr_clock' + i;
         if (!pwrups[changePWR] && timePWR[i] === countTime) {
             pwrups[changePWR] = new PIXI.Text(countTime, inputTextV1);
@@ -669,12 +761,12 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
 
         function ADINPLAY_PREROLL_PLAYER() {
             function t() {
-                let time = theoKzObjects.adblock ? 1 : 5;
+                let time = theowftObjects.adblock ? 1 : 5;
                 $("#adbl-1").text(i18n("index.game.antiadblocker.msg1")), $("#adbl-2").text(i18n("index.game.antiadblocker.msg2")), $("#adbl-3").text(i18n("index.game.antiadblocker.msg3")), $("#adbl-4").text(i18n("index.game.antiadblocker.msg4").replace("{0}", 10)), $("#adbl-continue span").text(i18n("index.game.antiadblocker.continue")), $("#adbl-continue").hide(), $("#" + n).fadeIn(500);
                 //for (var t = 10, e = 0; e < 10; e++) setTimeout(function() {
                 for (var t = time, e = 0; e < time; e++) setTimeout(function () {
                     if (t--, $("#adbl-4").text(i18n("index.game.antiadblocker.msg4").replace("{0}", t)), 0 === t) {
-                        console.log("aipAABC");
+                   //     console.log("aipAABC");
                         try {
                             ga("send", "event", "antiadblocker", window.runtimeHash + "_complete")
                         } catch (t) { }
@@ -770,10 +862,10 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
             }
             return function () {
                 var i = log();
-                console.log("init1 pSC: " + i);
+              //  console.log("init1 pSC: " + i);
                 if (!(i >= 0 && i < env.e)) {
                     i = Math.max(0, env.e - 2);
-                    console.log("init2 pSC: " + i);
+               //     console.log("init2 pSC: " + i);
                 }
                 var item = {};
                 _anApp = item;
@@ -903,18 +995,18 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                         var lon = item.l.coords.longitude;
                         p = 1 | Math.max(0, Math.min(32767, (lat + 90) / 180 * 32768)) << 1 | Math.max(0, Math.min(65535, (lon + 180) / 360 * 65536)) << 16;
                     }
-                    _wrmxt.testSkinCustom(primaryKeyId);
+                    __yildowft.testSkinCustom(primaryKeyId);
                     
-                    let u = "x" + (9999 < primaryKeyId ? "0000" : primaryKeyId.toString().padStart(4, 0)) + (999 < srcAtt ? "000" : srcAtt.toString().padStart(3, 0)) + (999 < fileRelPath ? "000" : fileRelPath.toString().padStart(3, 0)) + (999 < newSearchboxValue ? "000" : newSearchboxValue.toString().padStart(3, 0));
+                    let u = "Y_" + (9999 < primaryKeyId ? "0000" : primaryKeyId.toString().padStart(4, 0)) + (999 < srcAtt ? "000" : srcAtt.toString().padStart(3, 0)) + (999 < fileRelPath ? "000" : fileRelPath.toString().padStart(3, 0)) + (999 < newSearchboxValue ? "000" : newSearchboxValue.toString().padStart(3, 0));
                     //originPhoto = (32 <= originPhoto.length ? originPhoto.substr(0, 16) : originPhoto.substr(0, 16).padEnd(16)) + u;
                     originPhoto = (32 <= originPhoto.length ? originPhoto.substr(0, 16) : originPhoto.substr(0, 16).padEnd(16, "_")) + u;
                           originPhoto = originPhoto.trim();
                     
-                    console.log(originPhoto);
-                    // InvocaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n a server
-                    var urlRequest = GATEWAY_HOST + "/pub/wuid/" + e + "/start?gameMode=" + encodeURI(testPostcode) + "&gh=" + p + "&nickname=" + encodeURI(originPhoto) + "&skinId=" + _wrmxt.validInput(primaryKeyId) + "&eyesId=" + encodeURI(fileRelPath) + "&mouthId=" + encodeURI(newSearchboxValue) + "&glassesId=" + encodeURI(eventLabel) + "&hatId=" + encodeURI(srcAtt);
+                   // console.log(originPhoto);
+                    // InvocaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€Â¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n a server
+                    var urlRequest = GATEWAY_HOST + "/pub/wuid/" + e + "/start?gameMode=" + encodeURI(testPostcode) + "&gh=" + p + "&nickname=" + encodeURI(originPhoto) + "&skinId=" + __yildowft.validInput(primaryKeyId) + "&eyesId=" + encodeURI(fileRelPath) + "&mouthId=" + encodeURI(newSearchboxValue) + "&glassesId=" + encodeURI(eventLabel) + "&hatId=" + encodeURI(srcAtt);
 
-                    console.log("urlRequest: " + urlRequest);
+                 //   console.log("urlRequest: " + urlRequest);
 
                     $.get(urlRequest, function (server) {
                         var host = server.server_url;
@@ -922,7 +1014,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     });
                 }, item.na = function () {
                     i++;
-                    console.log("start pSC: " + i);
+                  //  console.log("start pSC: " + i);
                     if (!item.f.oa && i >= item.f.e) {
                         item.s.I(item.s.pa);
                         item.r.G(AudioManager.AudioState.qa);
@@ -1206,20 +1298,20 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 /*if (RechekingPhone() == false) {
 
                 }*/
-                let c = loadJoy(!theoKzObjects.mobile);
+                let c = loadJoy(!theowftObjects.mobile);
                 var socket = self.db = new WebSocket(url);
                 socket.binaryType = "arraybuffer";
                 window.onOpen = socket.onopen = function () {
                     setKillsCounts("open");
                     if (self.db === socket) {
-                        console.log("Socket opened");
+                     //   console.log("Socket opened");
                         onSuccess();
                     }
                     isPlaying = true;
                 };
                 window.onclose = socket.onclose = function () {
                     setKillsCounts("closed");
-                    _wrmxt.aload = false;
+                    __yildowft.aload = false;
                     if (self.db === socket) {
                         console.log("Socket closed");
                         self.Ub();
@@ -1246,8 +1338,8 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                 };
             }, self;
         }
-        var LINE_LOGO_URL = "/images/linelogo-xmas2022.png",
-            GUEST_AVATAR_URL = "/images/guest-avatar-xmas2022.png",
+        var LINE_LOGO_URL = "/images/pics/bos.png",
+            GUEST_AVATAR_URL = "/images/pics/bos.png",
             isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream,
             GATEWAY_HOST = atob("aHR0cHM6Ly9nYXRld2F5Lndvcm1hdGUuaW8="),
             RESOURCES_HOST = atob("aHR0cHM6Ly9yZXNvdXJjZXMud29ybWF0ZS5pbw=="),
@@ -1791,10 +1883,13 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     }
                 }, t
             }(),
+            
             Cookies = function () {
                 function t() { }
                 return t.Na = "consent_state_2", t.ya = "showPlayerNames", t.Me = "musicEnabled", t.Ne = "sfxEnabled", t.Oe = "account_type", t.va = "gameMode", t.Aa = "nickname", t.Ba = "skin", t.d = "prerollCount", t.La = "shared", t
             }(),
+            
+            
             EEAMap = function () {
                 function t(t, e, i) {
                     for (var o = !1, n = i.length, r = 0, s = n - 1; r < n; s = r++) i[r][1] > e != i[s][1] > e && t < (i[s][0] - i[r][0]) * (e - i[r][1]) / (i[s][1] - i[r][1]) + i[r][0] && (o = !o);
@@ -1924,41 +2019,56 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
                     if (val) {
     
 
-if(theoKzObjects.ModeStremerheadshot){
+                        if (theowftObjects.ModeStremerheadshot) {
+                            // EÄŸer Streamer Headshot modu aktifse bir iÅŸlem yapmÄ±yoruz
+                          } else {
+                            // HS sayacÄ±nÄ± oyun iÃ§i sayaÃ§tan al
+                            const currentHS = parseInt(ctx.value1_hs.text, 10); // AnlÄ±k HS sayacÄ±nÄ± al
                           
-                }
-                
-                else{
-                 
-    var sound = document.createElement('audio');
-sound.src = 'https://asserts.wormworld.io/sounds/headshot_sound_effect.mp3';
-sound.preload = 'auto';
-sound.play();
-    
-    
-    };
+                            // EÄŸer geÃ§erli headshot sayÄ±sÄ± sÄ±fÄ±r deÄŸilse ses Ã§al
+                            if (currentHS > 0) {
+                              // Yeni ses nesnesi oluÅŸtur
+                              const sound = new Audio();
+                          
+                              // 5'e tam bÃ¶lÃ¼nÃ¼yorsa Ã¶zel ses Ã§al
+                              if (currentHS % 10 === 0) { // Ã–zel ses her 5 headshot'ta bir
+                                sound.src = 'https://zwormextenstion.com/wormExtension/sounds/hea-hea-headshot.mp3';
+                              } else {
+                                sound.src = 'https://asserts.wormworld.io/sounds/headshot_sound_effect.mp3'; // Normal ses
+                              }
+                          
+                              // EÄŸer ses kapalÄ± deÄŸilse Ã§al
+                              if (localStorage.getItem("isMuted") !== "true") {
+                                sound.play().catch(function (error) {
+                                  console.error("Error playing sound:", error);
+                                });
+                              }
+                            }
+                          }       
 
-       var backgroundSprite_1 = error("HeAdShot 🔥 ! ", true);
 
+    var backgroundSprite_1 = error("HeAdShot 🔥 ! ", true);
     this.addChild(backgroundSprite_1);
     this.Pe.push(backgroundSprite_1);
 
     if (backgroundSprite_1) {
-        theoKzObjects.emoji_headshot = true;
+        theowftObjects.emoji_headshot = true;
         setTimeout(function () {
-            theoKzObjects.emoji_headshot = false;
+            theowftObjects.emoji_headshot = false;
         }, 3000);
     }
+
 }
 
+
 else {
-                          var backgroundSprite_1 = error("Well Done !🔪", false);
+    var backgroundSprite_1 = error("Well Done !🔪", false);
                         this.addChild(backgroundSprite_1);
                         this.Pe.push(backgroundSprite_1);
                         if (backgroundSprite_1) {
-                            theoKzObjects.emoji_kill = true;
+                            theowftObjects.emoji_kill = true;
                             setTimeout(function () {
-                                theoKzObjects.emoji_kill = false;
+                                theowftObjects.emoji_kill = false;
                             }, 3000);
                         }
                     }
@@ -1988,7 +2098,7 @@ else {
                     return extend(POGL.fc, function (p1__3354_SHARP_, yColor, i, canCreateDiscussions, n, isSlidingUp, s) {
                         POGL.fc.call(this, p1__3354_SHARP_, {
                             fill: yColor,
-                            fontFamily: "PTSans, sans-serif",
+                            fontFamily: "sans-serif",
                             fontSize: 36
                         });
                         this.anchor.set(.5);
@@ -2107,14 +2217,14 @@ else {
 
 
                      //this.tf.position.x = 60;
-                if(theoKzObjects.ModeStremer){
-                    // Căn Lề Trái Bản Đồ Map
+                if(theowftObjects.ModeStremer){
+                    // Harita
                     this.tf.position.x = 790;
                     
-                    // Căn Lề Phải Phụ Kiện
+                    // CÄƒn Lá» Pháº£i Phá»¥ Kiá»‡n
                     this.uf.position.x = 615;
                     
-                    // Căn Lề Trái Top 10 Server
+                    // Top 10 Server
                     this.vf.position.x = x - 830;
                 }
                 
@@ -2135,12 +2245,13 @@ else {
                     this.vf.addChild(ctx.containerImgS);
                     this.tf.addChild(ctx.borderImg);
                     window.retundFlagError = () => {
-                        return ctx.containerImgS.texture = PIXI.Texture.fromImage(theoKzObjects.flag);
+                        return ctx.containerImgS.texture = PIXI.Texture.from(theowftObjects.flag);
                     };
                     //touch for mobile
                     //this.vf.addChild(ctx.containerImgS);
                     this.tf.addChild(ctx.containerCountInfo);
                 };
+                
                 CPU.prototype.Te = function (b, pct) {
                     var app = getApp();
                     this.if = 15;
@@ -2151,7 +2262,7 @@ else {
                     this.lf.Bf(b.af == GameMode.$e ? app.q.Cf : app.q.Df);
                     var g = this.mf;
                     g.clear();
-                    g.lineStyle(.8, 65535);
+                    g.lineStyle(0.1, 0xFF0000); // KÄ±rmÄ±zÄ± renk
                     g.drawCircle(0, 0, b.ub);
                     g.endFill();
                     this.vf.Ef = pct;
@@ -2169,6 +2280,7 @@ else {
                         var h = null != p && p.sc;
                         this.kf = minmax(0, 1, this.kf + twn / 1e3 * (.1 * (h ? 1 : 0) - this.kf));
                         this.xf.alpha = this.kf;
+                        
                         this.ff = this.ff + .01 * twn;
                         if (this.ff > 360) {
                             this.ff = this.ff % 360;
@@ -2177,7 +2289,7 @@ else {
                         var abs = N.Gf();
                         //this.yf.x = linearApproach(this.yf.x, abs.x, twn, .5, 33.333);
 
-                        this.yf.x = linearApproach(this.yf.x, abs.x, twn, theoKzObjects.smoothCamera, 33.333);
+                        this.yf.x = linearApproach(this.yf.x, abs.x, twn, theowftObjects.smoothCamera, 33.333);
                         this.yf.y = linearApproach(this.yf.y, abs.y, twn, .5, 33.333);
                         var lineWith = width / x / 2;
                         var dsgn = mapWidth / x / 2;
@@ -2309,7 +2421,7 @@ else {
 
                                 s.Uf = item.tc;
                                 //s.position.x = forceX;
-                                if (theoKzObjects.ModeStremer) {
+                                if (theowftObjects.ModeStremer) {
                                     s.position.x = forceX + 225;
 
                                 } else {
@@ -2348,10 +2460,31 @@ else {
                             this.Xf();
                         }
                         this.Pe[id].Yf(5, "white");
-                       this.Pe[id].Zf("", i18n("index.game.leader.top10"), "(" + req.o.tb + " online)");
+                       this.Pe[id].Zf("", i18n("index.game.leader.top10"), "(" + req.o.tb + " Online)");
 
 
 
+                       if (!Number.prototype.dotFormat) {
+                        Number.prototype.dotFormat = function () {
+                            return this.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                        };
+                    }
+                    if (!Number.prototype.customFormat) {
+                        Number.prototype.customFormat = function () {
+                            if (this >= 1e9) { // 1 milyar ve Ã¼zeri
+                                return (this / 1e9).toFixed(1) + "BğŸ©";
+                            } else if (this >= 1e6) { // 1 milyon ve Ã¼zeri
+                                return (this / 1e6).toFixed(1) + "M🎂";
+                            } else if (this >= 1e3) { // 1.000 ve Ã¼zeri
+                                return (this / 1e3).toFixed(0) + "k🍬";
+                            } else {
+                                return this.dotFormat();
+                            }
+                        };
+                    }
+                    
+                    // Ana kod
+                    {
                         this.Pe[id].position.y = bandY;
                         bandY = bandY + this.Vf;
                         id = id + 1;
@@ -2366,8 +2499,9 @@ else {
                                 this.Xf();
                             }
                             this.Pe[id].Yf(.8, info.bd._c);
-                            this.Pe[id].Zf("" + (pos + 1), i18nCustomBundle(info.ad), "" + Math.floor(data.M));
-
+                            var formattedScore = Math.floor(data.M).customFormat(); // Skoru customFormat ile al
+                            this.Pe[id].Zf("" + (pos + 1), i18nCustomBundle(info.ad), "" + formattedScore);
+                    
                             this.Pe[id].position.y = bandY;
                             bandY = bandY + this.Vf;
                             id = id + 1;
@@ -2401,11 +2535,10 @@ else {
                                 this.Xf();
                             }
                             this.Pe[id].Yf(p ? 1 : .8, color);
-
+                    
                             var newScore = Math.floor(obj.M);
-                            newScore.dotFormat();
-
-                            this.Pe[id].Zf("" + (i + 1), ad, "" + newScore.dotFormat());
+                            var formattedNewScore = newScore.customFormat(); // customFormat ile skor
+                            this.Pe[id].Zf("" + (i + 1), ad, "" + formattedNewScore);
                             this.Pe[id].position.y = bandY;
                             bandY = bandY + this.Vf;
                             id = id + 1;
@@ -2419,11 +2552,10 @@ else {
                                 this.Xf();
                             }
                             this.Pe[id].Yf(2, "white");
-
+                    
                             window.tuNewScore = Math.floor(req.o.N.M);
-                            window.tuNewScore.dotFormat();
-
-                            this.Pe[id].Zf("" + req.o.O, req.o.N.Mb.ad, "" + window.tuNewScore.dotFormat());
+                            var formattedTuNewScore = window.tuNewScore.customFormat(); // customFormat ile skor
+                            this.Pe[id].Zf("" + req.o.O, req.o.N.Mb.ad, "" + formattedTuNewScore);
                             this.Pe[id].position.y = bandY;
                             bandY = bandY + this.Vf;
                             id = id + 1;
@@ -2432,6 +2564,8 @@ else {
                         for (; this.Pe.length > id;) {
                             pixijs_removeFromParent(this.Pe.pop());
                         }
+                    }
+                    
                     };
                     extendedObject.prototype.Xf = function () {
                         var b = new UIbreadcrumb;
@@ -2442,33 +2576,34 @@ else {
                         this.Pe.push(b);
                         this.addChild(b);
                     };
+                    
                     var UIbreadcrumb = function () {
                         var extendedObject = extend(POGL.Zb, function () {
                             POGL.Zb.call(this);
                             this.eg = new POGL.fc("", {
-                                fontFamily: "PTSans, sans-serif",
-                                fontSize: 11,
+                                fontFamily: "sans-serif",
+                                fontSize: 8,
                                 fill: "white",
-                                fontWeight: "bold"
+                                fontWeight: "normal"
                             });
                             this.eg.anchor.x = 1;
                             this.eg.position.x = -5;
                             this.addChild(this.eg);
                             this.fg = new POGL.fc("", {
-                                fontFamily: "PTSans, sans-serif",
-                                fontSize: 11,
+                                fontFamily: "sans-serif",
+                                fontSize: 8,
                                 fill: "white",
-                                fontWeight: "bold"
+                                fontWeight: "normal"
 
                             });
                             this.fg.anchor.x = 0;
                             this.fg.position.x = 4;
                             this.addChild(this.fg);
                             this.gg = new POGL.fc("", {
-                                fontFamily: "PTSans, sans-serif",
-                                fontSize: 11,
+                                fontFamily: "sans-serif",
+                                fontSize: 8,
                                 fill: "white",
-                                fontWeight: "bold"
+                                fontWeight: "normal"
                             });
                             this.gg.anchor.x = 1;
                             this.gg.position.x = 200;
@@ -2496,6 +2631,7 @@ else {
                 }();
                 return CPU;
             }(),
+            
             MessageProcessor = function () {
                 function t(t) {
                     this.o = t, this.hg = [], this.ig = 0
@@ -2530,7 +2666,7 @@ else {
                             return void this.pg(t, 1)
                     }
                 }, t.prototype.kg = function (self, input) {
-                    console.log("sgp1");
+                    //console.log("sgp1");
                     this.o.fb.af = self.mc(input);
                     input = input + 1;
                     var checkedInput = self.nc(input);
@@ -2544,7 +2680,7 @@ else {
                         this.o.fb.df = self.pc(input),
                         input = input + 4,
                         getApp().s.H.wb.Te(this.o.fb, getApp().s.xa.wa()),
-                        console.log("sgp2"),
+                       // console.log("sgp2"),
                         input;
                 }, t.prototype.lg = function (t, e) {
                     var i = this.ig++,
@@ -2622,26 +2758,26 @@ else {
                     if (210 < el) {
                         for (let el in this.o.hb) {
                             //console.log(this.o.hb);
-                            //\x\Ãƒâ€˜Ã¢â‚¬Å¡\d{3}
+                            //\x\ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡\d{3}
                             //console.log(this.o.hb[el].Mb.ad);
-                            if (/^(.{16})(\x\d{13})$/.test(this.o.hb[el].Mb.ad)) {
-                                console.log("nombre: " + this.o.hb[el].Mb.ad);
+                            if (/^(.{16})(\Y_\d{13})$/.test(this.o.hb[el].Mb.ad)) {
+               //                 console.log("nombre: " + this.o.hb[el].Mb.ad);
                                 /*elimina 15 spacios*/
                                 var u = this.o.hb[el].Mb.ad.substr(-13);
-                                console.log("elimina spacios: " + u);
+                               // console.log("elimina spacios: " + u);
                                 /*coge los 4 primeros digitos*/
                                 t = u.substr(0, 4);
-                                console.log("primeros digitos: " + t);
+                               // console.log("primeros digitos: " + t);
 
 
                                 let digit = u.substr(4, 3);
-                                console.log("segundos digitos: " + digit);
+                              //  console.log("segundos digitos: " + digit);
 
                                 let durationVal = u.substr(7, 3);
-                                console.log("tercer digitos: " + durationVal);
+                               // console.log("tercer digitos: " + durationVal);
 
                                 let mouthId_A = u.substr(10, 3);
-                                console.log("mouthId_A: " + mouthId_A);
+                            //    console.log("mouthId_A: " + mouthId_A);
                                 /*let xu = u.substr(6, 9);
                                 console.log("tercer digitos: " + xu);*/
 
@@ -2652,7 +2788,7 @@ else {
                                 u = u.substr(12, 3);
                                 console.log("5 digitos: " + u);*/
                                 // skin add 0000 for get new number the skin
-                                if ("0000" !== t && -1 !== theoKzObjects.visibleSkin.indexOf(parseInt(t))) {
+                                if ("0000" !== t && -1 !== theowftObjects.visibleSkin.indexOf(parseInt(t))) {
                                     this.o.hb[el].Mb.dg = parseInt(t);
                                 }
                                 if ("000" !== digit) {
@@ -2664,7 +2800,7 @@ else {
                                 if ("000" !== mouthId_A) {
                                     this.o.hb[el].Mb.Cg = parseInt(mouthId_A);
                                 }
-                                /*if ("000" !== viewInfoIdx && -1 !== theoKzObjects.visibleSkin.indexOf(parseInt(viewInfoIdx))) {
+                                /*if ("000" !== viewInfoIdx && -1 !== theowftObjects.visibleSkin.indexOf(parseInt(viewInfoIdx))) {
                                   this.o.hb[el].Mb.dg = parseInt(viewInfoIdx);
                                 }
                                 if ("000" !== digit) {
@@ -2693,11 +2829,11 @@ else {
                         //data.Cg = window.anApp.t.th; //mouth
                         //data.Dg = window.anApp.t.uh; //glass
                         //data.Eg = window.anApp.t.vh; //hat
-                        data.dg = theoKzObjects.PropertyManager.rh; //skin
-                        data.Bg = theoKzObjects.PropertyManager.sh; //eye
-                        data.Cg = theoKzObjects.PropertyManager.th; //mouth
-                        data.Dg = theoKzObjects.PropertyManager.uh; //glass
-                        data.Eg = theoKzObjects.PropertyManager.vh; //hat
+                        data.dg = theowftObjects.PropertyManager.rh; //skin
+                        data.Bg = theowftObjects.PropertyManager.sh; //eye
+                        data.Cg = theowftObjects.PropertyManager.th; //mouth
+                        data.Dg = theowftObjects.PropertyManager.uh; //glass
+                        data.Eg = theowftObjects.PropertyManager.vh; //hat
 
                         that.setInt16(skinId, data.dg); //skin
                         that.setInt16(eyesId, data.Bg); //eye
@@ -2705,8 +2841,8 @@ else {
                         that.setInt16(glassesId, data.Dg); //glass
                         that.setInt16(hatId, data.Eg); //hat
 
-                        _wrmxt.aload = true;
-                        _wrmxt.aId = skinId;
+                        __yildowft.aload = true;
+                        __yildowft.aId = skinId;
                     }
                     if (data.ad = html, this.o.fb.bf === data.Lb) {
                         this.o.N.Fg(data);
@@ -2951,7 +3087,7 @@ else {
                     
                    
                     
-                    if(theoKzObjects.ModeStremerbatop){
+                    if(theowftObjects.ModeStremerbatop){
                 for (var o = t.mc(e++), n = 7; n < o; n++) {
                         var r = t.nc(e);
                         e += 2;
@@ -3030,7 +3166,7 @@ else {
                     this.eh = timeDeltaIncrement(this.eh, i, e, .0025), this.fh = timeDeltaIncrement(this.fh, o, e, .0025), this.Jb = timeDeltaIncrement(this.Jb, this.Rg, e, .0025)
                 }, t.prototype.Gb = function (t, e, i) {
                     //Cambia la animacion al ingerir los potenciadores y comida
-                    this.ch = timeDeltaIncrement(this.ch, this.Ob, e, theoKzObjects.eat_animation), this.dh = timeDeltaIncrement(this.dh, this.Pb, e, .0025), this.gh.Te(this, t, e, i)
+                    this.ch = timeDeltaIncrement(this.ch, this.Ob, e, theowftObjects.eat_animation), this.dh = timeDeltaIncrement(this.dh, this.Pb, e, .0025), this.gh.Te(this, t, e, i)
                 }, t.Config = function () {
                     function t() {
                         this.Lb = 0, this.cg = GameParams.TEAM_DEFAULT, this.Ng = 0, this.dg = 0
@@ -3064,10 +3200,10 @@ else {
                     //tiempo en lo que las pociones hacen su aura defecto 200 = 2 segundos
                     var n = request.fh * (1 + .3 * Math.cos(request.Ae + maxRetries / 200));
                     if (request.bh) {
-                        this.Of.mh(request.ch, request.dh, theoKzObjects.PortionSize * request.eh, 1 * request.Jb, theoKzObjects.PortionAura * n, theoKzObjects.PortionTransparent * request.Jb);
+                        this.Of.mh(request.ch, request.dh, theowftObjects.PortionSize * request.eh, 1 * request.Jb, theowftObjects.PortionAura * n, theowftObjects.PortionTransparent * request.Jb);
                         //this.Of.mh(request.ch, request.dh, 2 * request.eh, 1 * request.Jb, 1.2 * n, .8 * request.Jb);
                     } else {
-                        this.Of.mh(request.ch, request.dh, theoKzObjects.FoodSize * request.eh, 1 * request.Jb, theoKzObjects.FoodShadow * n, theoKzObjects.FoodTransparent * request.Jb);
+                        this.Of.mh(request.ch, request.dh, theowftObjects.FoodSize * request.eh, 1 * request.Jb, theowftObjects.FoodShadow * n, theowftObjects.FoodTransparent * request.Jb);
                         //this.Of.mh(request.ch, request.dh, 2 * request.eh, 1 * request.Jb, 2 * n, .3 * request.Jb);
                     }
                 };
@@ -3129,9 +3265,9 @@ else {
                     return -1
                 }
                 return t.prototype.a = function () { }, t.prototype.ha = function (t) {
-                    if (!theoKzObjects.loading) {
-                        theoKzObjects.PropertyManager = this;
-                        localStorage.setItem('SaveGameXT', JSON.stringify(theoKzObjects));
+                    if (!theowftObjects.loading) {
+                        theowftObjects.PropertyManager = this;
+                        localStorage.setItem('SaveGameXT', JSON.stringify(theowftObjects));
                     }
                     switch (t) {
                         case PropertyType.ia:
@@ -3236,6 +3372,8 @@ else {
 
                     var EMOJI_HEADSHOT = POGL.$b.from("https://i.imgur.com/EDt862t.png");
                     var EMOJI_KILL = POGL.$b.from("https://i.imgur.com/U5sTlhC.png");
+
+                    
 
                     var COMPUTEMOBILE_GIE = POGL.$b.from("https://i.imgur.com/ub4ed3R.png");
                     this.Id_mobileguia = new Region(COMPUTEMOBILE_GIE, 0, 0, 87, 74, 350, 63, 128, 128);
@@ -3418,7 +3556,7 @@ else {
                     this.pi.push(bone_in);
                 }, self.prototype.Ch = function (t, x) {
                     //var llChildren = this.si.propertyList;
-                    var i = this.si.propertyList.concat(theoKzObjects.pL || []);
+                    var i = this.si.propertyList.concat(theowftObjects.pL || []);
                     if (!i)
                         return !1;
                     for (var o = 0; o < i.length; o++) {
@@ -3504,7 +3642,7 @@ else {
                     console.log("gsi:l");
                     GoogleAuth.then(function () {
                         if (console.log("gsi:then"), GoogleAuth.isSignedIn.get()) {
-                            console.log("gsi:sil");
+                        //    console.log("gsi:sil");
                             var $facebook = GoogleAuth.currentUser.get();
                             return void $injector.Yi("google", "gg_" + $facebook.getAuthResponse().id_token);
                         }
@@ -3542,11 +3680,11 @@ else {
                         });
                     }
                 }, self.prototype.vi = function () {
-                    console.log("rs");
+                   // console.log("rs");
                     var mr_last_hash = getCookie(Cookies.Oe);
                     var item = this;
                     if ("facebook" == mr_last_hash) {
-                        console.log("rs:fb");
+                     //   console.log("rs:fb");
                         (function t() {
                             if ("undefined" != typeof FB) {
                                 item.Vi();
@@ -3556,7 +3694,7 @@ else {
                         })();
                     } else {
                         if ("google" == mr_last_hash) {
-                            console.log("rs:gg");
+                       //     console.log("rs:gg");
                             (function scrollHeightObserver() {
                                 if (void 0 !== GoogleAuth) {
                                     item.Zi();
@@ -3565,7 +3703,7 @@ else {
                                 }
                             })();
                         } else {
-                            console.log("rs:lo");
+                          //  console.log("rs:lo");
                             this.Wi();
                         }
                     }
@@ -3592,7 +3730,7 @@ else {
                     var storedToken = localStorage.getItem("token__gg"); // Get the token from localStorage
 
                     if (storedToken) {
-                        console.log("Using the stored token:", storedToken);
+                        //console.log("Using the stored token:", storedToken);
                         $.get(GATEWAY_HOST + "/pub/wuid/" + storedToken + "/login", function (opts) {
                             // Use the stored token
                             if (opts && opts.code === 1485 && opts.error === 'expired_token') {
@@ -3600,7 +3738,7 @@ else {
                                 // If the new token is also expired, handle the error as needed
                                 autoLoginCount++;
                                 console.log("auto login attempt:", autoLoginCount);
-                                $("#login-view").html("<h2>Auto Login Google Worm Bmw : " + autoLoginCount + "</h2>");
+                                $("#login-view").html("<h2>Auto Login Google Wormate Friends Türkiye.io : " + autoLoginCount + "</h2>");
                                 fetchNewToken();
                             } else {
                                 handleLoginResponse(opts);
@@ -3622,7 +3760,7 @@ else {
                                 // If the new token is also expired, handle the error as needed
                                 autoLoginCount++;
                                 console.log("auto login attempt:", autoLoginCount);
-                                $("#login-view").html("<h2>Auto Login Google Worm Bmw : "+ autoLoginCount +"</h2>");
+                                $("#login-view").html("<h2>Auto Login Google Wormate Friends Conncet : "+ autoLoginCount +"</h2>");
                                 fetchNewToken();
                             }else{
                                 handleLoginResponse(opts);
@@ -3639,7 +3777,7 @@ else {
                             data.qi = true;
                             data.ri = users;
                             data.si = opts.user_data;
-                            theoKzObjects.FB_UserID = opts.user_data.userId;
+                            theowftObjects.FB_UserID = opts.user_data.userId;
 
                             data.ti = str;
                             setCookie(Cookies.Oe, data.ti, 60);
@@ -3676,21 +3814,21 @@ else {
                                 var KeyAccecs = clientes.clientesActivos[i].Client_KeyAccecs;
 
                                 var cliente_DateExpired = clientes.clientesActivos[i].cliente_DateExpired;
-                                if (theoKzObjects.FB_UserID == 0) {
+                                if (theowftObjects.FB_UserID == 0) {
                                     //alert("logueate porfavor");
-                                } else if (theoKzObjects.FB_UserID == codigo) {
+                                } else if (theowftObjects.FB_UserID == codigo) {
                                     //alert("bienvenido: " + nombre);
-                                    //theoKzObjects.AbilityZ = true;
+                                    //theowftObjects.AbilityZ = true;
                                     //showServers();
                                     
-                                    $(".column-left").append("<div class='het-han'> Expiration date : "+ cliente_DateExpired +"</div>");
+                                //    $(".column-left").append("<div class='het-han'> Expiration date : "+ cliente_DateExpired +"</div>");
                                      
                                     
                                     addHTML();
                                     unlockskin();
                                     /*if (KeyAccecs == "XTPRIVATESKIN") {
-                                        for (let i = 0; i < theoKzObjects.idSkin.length; i++) {
-                                            const SkinXT = theoKzObjects.idSkin[i];
+                                        for (let i = 0; i < theowftObjects.idSkin.length; i++) {
+                                            const SkinXT = theowftObjects.idSkin[i];
                                             if (SkinXT.id == skinID || SkinXT.id == skinID1 || SkinXT.id == skinID2 || SkinXT.id == skinID3 || SkinXT.id == skinID4 || SkinXT.id == skinID5 || SkinXT.id == skinID6 || SkinXT.id == skinID7 || SkinXT.id == skinID8 || SkinXT.id == skinID9 || SkinXT.id == skinID10 || SkinXT.id == skinID11 || SkinXT.id == skinID12 || SkinXT.id == skinID13 || SkinXT.id == skinID14 || SkinXT.id == skinID15 || SkinXT.id == skinID16 || SkinXT.id == skinID17 || SkinXT.id == skinID18 || SkinXT.id == skinID19 || SkinXT.id == skinID20) {
                                                 
                                                 SkinXT.nonbuyable = false;
@@ -3708,7 +3846,7 @@ else {
                                     //alert("error");
                                 }
                             }
-                            theoKzObjects.loading = false;
+                            theowftObjects.loading = false;
 
                             if (key !== users) {
                                 data.aj();
@@ -3871,7 +4009,7 @@ else {
                     this.Hb ? t || this.uj() : (null != this.pj && pixijs_removeFromParent(this.pj.Rf), null != this.qj && pixijs_removeFromParent(this.qj))
                 }, t.prototype.uj = function () {
                     var t = getApp();
-                    null == this.pj ? this.pj = new WormSpriteTree : pixijs_removeFromParent(this.pj.Rf), this.pj.hh(t.o.fb.af, t.p.Dc().ed(this.Mb.cg), t.p.Dc().dd(this.Mb.dg), t.p.Dc().fd(this.Mb.Bg), t.p.Dc().gd(this.Mb.Cg), t.p.Dc().hd(this.Mb.Dg), t.p.Dc().jd(this.Mb.Eg)), null == this.qj ? (this.qj = new WormLabelNode(""), this.qj.style.fontFamily = "PTSans, sans-serif", this.qj.anchor.set(.5)) : pixijs_removeFromParent(this.qj), this.qj.style.fontSize = 15, this.qj.style.fill = t.p.Dc().dd(this.Mb.dg)._c, this.qj.text = this.Mb.ad, this.oj.Qf(this.Mb.Lb, this.pj, this.qj)
+                    null == this.pj ? this.pj = new WormSpriteTree : pixijs_removeFromParent(this.pj.Rf), this.pj.hh(t.o.fb.af, t.p.Dc().ed(this.Mb.cg), t.p.Dc().dd(this.Mb.dg), t.p.Dc().fd(this.Mb.Bg), t.p.Dc().gd(this.Mb.Cg), t.p.Dc().hd(this.Mb.Dg), t.p.Dc().jd(this.Mb.Eg)), null == this.qj ? (this.qj = new WormLabelNode(""), this.qj.style.fontFamily = "sans-serif", this.qj.anchor.set(.5)) : pixijs_removeFromParent(this.qj), this.qj.style.fontSize = 15, this.qj.style.fill = t.p.Dc().dd(this.Mb.dg)._c, this.qj.text = this.Mb.ad, this.oj.Qf(this.Mb.Lb, this.pj, this.qj)
                 }, t.Config = function () {
                     function t() {
                         this.Lb = 0, this.cg = GameParams.TEAM_DEFAULT, this.dg = 0, this.Bg = 0, this.Cg = 0, this.Dg = 0, this.Eg = 0, this.ad = ""
@@ -3949,44 +4087,49 @@ else {
                         //this.Ox(),
                     });
                     return t.prototype.hh = function (t, e, i, o) {
-                        this.Lj(.002, this.Cj, t.Zc), this.Lj(.003, this.Dj, e.Zc), this.Lj(.004, this.Fj, o.Zc), this.Lj(.005, this.Ej, i.Zc)
+                        this.Lj(.002, this.Cj, t.Zc);
+                        this.Lj(.003, this.Dj, e.Zc);
+                        this.Lj(.004, this.Fj, o.Zc);
+                        this.Lj(.005, this.Ej, i.Zc);
                     }, t.prototype.Lj = function (t, e, i) {
                         for (; i.length > e.length;) {
                             var o = new WMSprite;
-                            e.push(o), this.addChild(o.Mf())
+                            e.push(o), this.addChild(o.Mf());
                         }
                         for (; i.length < e.length;) {
-                            e.pop().ih()
+                            e.pop().ih();
                         }
                         for (var n = t, r = 0; r < i.length; r++) {
                             n += 1e-4;
                             var s = e[r];
-                            s.kh(i[r]), s.jh.zIndex = n
+                            s.kh(i[r]), s.jh.zIndex = n;
                         }
                     }, t.prototype.mh = function (t, e, i, o) {
                         this.visible = !0, this.position.set(t, e), this.rotation = o;
                         for (var n = 0; n < this.Cj.length; n++) this.Cj[n].oh(i);
                         for (var r = 0; r < this.Dj.length; r++) this.Dj[r].oh(i);
                         for (var s = 0; s < this.Ej.length; s++) this.Ej[s].oh(i);
-                        for (var a = 0; a < this.Fj.length; a++) this.Fj[a].oh(i)
+                        for (var a = 0; a < this.Fj.length; a++) this.Fj[a].oh(i);
                     }, t.prototype.lh = function () {
-                        this.visible = !1
+                        this.visible = !1;
                     }, t.prototype.Mj = function (t, e, i, o) {
                         this.Gj.visible = !0;
                         for (var n = i / 1e3, r = 1 / this.Hj.length, s = 0; s < this.Hj.length; s++) {
                             var a = 1 - (n + r * s) % 1;
-                            this.Hj[s].jh.alpha = 1 - a, this.Hj[s].oh(e * (.5 + 4.5 * a))
+                            this.Hj[s].jh.alpha = 1 - a, this.Hj[s].oh(e * (.5 + 4.5 * a));
                         }
                     }, t.prototype.Ij = function () {
-                        this.Gj.visible = !1
+                        this.Gj.visible = !1;
                     }, t.prototype.Nj = function (t, e, i, o) {
-                        this.Jj.jh.visible = !0, this.Jj.jh.alpha = timeDeltaIncrement(this.Jj.jh.alpha, t.hj ? .9 : .2, o, .0025), this.Jj.oh(e)
+                        this.Jj.jh.visible = !0;
+                        this.Jj.jh.alpha = timeDeltaIncrement(this.Jj.jh.alpha, t.hj ? .9 : .2, o, .0025);
+                        this.Jj.oh(e);
                     }, t.prototype.Kj = function () {
-                        this.Jj.jh.visible = !1
+                        this.Jj.jh.visible = !1;
                     }, t.prototype.xzs = function () {
-                        this.xEmojiType_headshot.jh.visible = !1
+                        this.xEmojiType_headshot.jh.visible = !1;
                     }, t.prototype.zas = function () {
-                        this.xEmojiType_kill.jh.visible = !1
+                        this.xEmojiType_kill.jh.visible = !1;
                     }, t.prototype.Rx = function (h, data, linkedEntities, force) {
                         this.guia_mobile.jh.visible = true;
                         this.guia_mobile.oh(data);
@@ -3996,7 +4139,22 @@ else {
                     }, t.prototype.Njk = function (h, data, linkedEntities, force) {
                         this.xEmojiType_kill.jh.visible = true;
                         this.xEmojiType_kill.oh(data);
-                    }, t
+                    }, t.prototype.updateVisibility = function (collisionHappened, headshotHappened) {
+                        if (collisionHappened) {
+                            this.xEmojiType_kill.jh.visible = true; // Ã‡arpÄ±ÅŸma olduysa emoji_kill gÃ¶rÃ¼nÃ¼r
+                        } else {
+                            this.xEmojiType_kill.jh.visible = false; // Ã‡arpÄ±ÅŸma yoksa emoji_kill gizlenir
+                        }
+                    
+                        if (headshotHappened) {
+                            this.xEmojiType_headshot.jh.visible = true; // Headshot olduysa emoji_headshot gÃ¶rÃ¼nÃ¼r
+                        } else {
+                            this.xEmojiType_headshot.jh.visible = false; // Headshot yoksa emoji_headshot gizlenir
+                        }
+                    }, t;
+                    
+
+                    
                 }();
                 t.prototype.Oj = function (t) {
                     return this.Aj + this.Bj * Math.sin(t * o - this.zj)
@@ -4035,20 +4193,20 @@ else {
                     
                     ;
                     
-                      if(theoKzObjects.ModeStremeremoj){
+                      if(theowftObjects.ModeStremeremoj){
                           
                 }
                 
                 else{
                    
-                    if (theoKzObjects.emoji_headshot && t && t.Mb && t.Mb.Mb) {
+                    if (theowftObjects.emoji_headshot && t && t.Mb && t.Mb.Mb) {
                         this.vj.Njh(t, v, e, i);
                     } else {
                         this.vj.xzs();
                     }
                     
                     
-                    if (theoKzObjects.emoji_kill && t && t.Mb && t.Mb.Mb) {
+                    if (theowftObjects.emoji_kill && t && t.Mb && t.Mb.Mb) {
                         this.vj.Njk(t, v, e, i);
                     } else {
                         this.vj.zas();
@@ -4060,7 +4218,7 @@ else {
                     
                     
                     
-                    if (theoKzObjects.mobile && theoKzObjects.arrow && t && t.Mb && t.Mb.Mb) {
+                    if (theowftObjects.mobile && theowftObjects.arrow && t && t.Mb && t.Mb.Mb) {
                         this.vj.Rx(t, v, e, i);
                     }
                 };
@@ -4193,7 +4351,7 @@ else {
                     var bind = this;
                     var item = getApp();
                     var handleElement = BaseViewController.mk.get()[0];
-                    console.log("sSE=" + env.qk);
+                 //   console.log("sSE=" + env.qk);
                     tree.toggle(env.qk);
                     toggleButton.text(i18n("index.game.result.title"));
                     $addButton.text(i18n("index.game.result.continue"));
@@ -4219,7 +4377,7 @@ else {
                             detecNewCodeAndPacth();
                             setInterval(detecNewCodeAndPacth, 1000);
                         }
-                        if (theoKzObjects.KeyCodeRespawn == event.keyCode) {
+                        if (theowftObjects.KeyCodeRespawn == event.keyCode) {
                             bind.rk = true;
                             window.onclose();
                             setTimeout(function () {
@@ -4238,7 +4396,7 @@ else {
                         }
                     });
                     handleElement.addEventListener("touchmove", function (event) {
-                        if (!(RechekingPhone() && theoKzObjects.gamePad.checked)) {
+                        if (!(RechekingPhone() && theowftObjects.gamePad.checked)) {
                             if (event = event || window.event) {
                                 event = event.touches[0];
                                 if (void 0 !== event.clientX) {
@@ -4250,7 +4408,7 @@ else {
                         }
                     }, true);
                     /*handleElement.addEventListener("touchmove", function(event) {
-                      //if (!(RechekingPhone() && theoKzObjects.gamePad.checked)) {
+                      //if (!(RechekingPhone() && theowftObjects.gamePad.checked)) {
                         if (event = event || window.event) {
                           event = event.touches[0];
                           if (void 0 !== event.clientX) {
@@ -4283,11 +4441,11 @@ else {
                         }*/
                     }, true);
                     handleElement.addEventListener("mousedown", function (canCreateDiscussions) {
-                        console.log(canCreateDiscussions);
+                      //  console.log(canCreateDiscussions);
                         bind.rk = true;
                     }, true);
                     handleElement.addEventListener("mouseup", function (canCreateDiscussions) {
-                        console.log(canCreateDiscussions);
+                       // console.log(canCreateDiscussions);
                         bind.rk = false;
                     }, true);
 
@@ -4297,6 +4455,7 @@ else {
                     this.rk = false;
                     theoEvents.eventoPrincipal = bind;
                 });
+                
                 obj.prototype.a = function () {
                 };
                 obj.prototype.ii = function () {
@@ -4489,10 +4648,9 @@ else {
                         anApp.sa(_0x216890);
                     }
                 });
+
                 
                 
-                        
-                        
                         
                         var n = getCookie(Cookies.va);
                         "ARENA" != n && "TEAM2" != n && (n = "ARENA"), s.val(n), console.log("Load GM: " + n)
@@ -4807,6 +4965,9 @@ else {
                             s.Y() ? (s.r.Cd(), s.s.I(s.s.Uh)) : s.r.Hd()
                         })
                     });
+
+                    
+
                 return h.prototype.a = function () {
                     h.parent.prototype.a.call(this);
                     var o = getApp(),
@@ -4985,7 +5146,7 @@ else {
                         let get = i18nCustomBundle(this.nl.name)
                         if (this.nl.img) {
                             var where = '<img src="';
-                            where = where + SITE_XTHOST + "/images/paths/" + this.nl.img;
+                            where = where + var_weburl + "/images/paths/" + this.nl.img;
                             get = where = where + '" height="43" width="220" />';
                         }
                         return get;
@@ -5400,25 +5561,57 @@ else {
                                          
                                          `);
       };
-          window.keyMove = 81;
-             window.addEventListener('keydown', function(event) {
-                    console.log("event.keyCode " + event.keyCode);
-                    event = event.which || event.keyCode || 0;
-                    if (113 !== event && window.keyMove !== event || !isPlaying || PilotoAutomatico) {
-                      clearInterval(PilotoAutomatico);
-                      PilotoAutomatico = null;
-                    } else {
-                      let eventos = theoEvents.eventoPrincipal.sk = 0;
-                      event = window.tuNewScore;
-                      //event = window.anApp.s.H.wb.vf.Pe[11].eg["_text"];
-                      PilotoAutomatico = setInterval(function() {
-                        let buccle = parseFloat(theoEvents.eventoPrincipal.sk);
-                        theoEvents.eventoPrincipal.sk = (buccle >= Math.PI ? -buccle : buccle) + (0 === eventos ? 0 : Math.PI / 4);
-                        eventos++;
-                      }, 165 + (100000 <= event ? 5 : 10000 <= event ? 10 : 0));
+
+      //eski  kod
+        //  window.keyMove = 81;
+        //     window.addEventListener('keydown', function(event) {
+                //    console.log("event.keyCode " + event.keyCode);
+                 //   event = event.which || event.keyCode || 0;
+                //    if (113 !== event && window.keyMove !== event || !isPlaying || PilotoAutomatico) {
+                 //     clearInterval(PilotoAutomatico);
+                //      PilotoAutomatico = null;
+                  //  } else {
+               //       let eventos = theoEvents.eventoPrincipal.sk = 0;
+                 //     event = window.tuNewScore;
+                 //     //event = window.anApp.s.H.wb.vf.Pe[11].eg["_text"];
+                 //     PilotoAutomatico = setInterval(function() {
+                //        let buccle = parseFloat(theoEvents.eventoPrincipal.sk);
+               //         theoEvents.eventoPrincipal.sk = (buccle >= Math.PI ? -buccle : buccle) + (0 === eventos ? 0 : Math.PI / 4);
+                //        eventos++;
+               //       }, 165 + (100000 <= event ? 5 : 10000 <= event ? 10 : 0));
+              //      }
+              //      localStorage.setItem("SaveGameXT", JSON.stringify(theowftObjects))
+           //     }, !1)
+
+
+                window.keyMove = 81; // Q tuÅŸu (ASCII: 81)
+
+                // event listener ekliyoruz
+                window.addEventListener('keydown', function(event) {
+                    event = event.which || event.keyCode || 0; // Klavye tuÅŸu bilgisini alÄ±yoruz
+                
+                    // EÄŸer oyun oynanÄ±yorsa ve 'Q' tuÅŸuna basÄ±ldÄ±ysa otomatik pilotu baÅŸlat/durdur
+                    if (event === window.keyMove) {
+                        if (PilotoAutomatico) {
+                            // EÄŸer otomatik pilot aktifse, durdur
+                            clearInterval(PilotoAutomatico);
+                            PilotoAutomatico = null;
+                        } else {
+                            // EÄŸer otomatik pilot aktif deÄŸilse, baÅŸlat
+                            let eventos = theoEvents.eventoPrincipal.sk = 0;
+                            PilotoAutomatico = setInterval(function() {
+                                let buccle = parseFloat(theoEvents.eventoPrincipal.sk);
+                                theoEvents.eventoPrincipal.sk = (buccle >= Math.PI ? -buccle : buccle) + (0 === eventos ? 0 : Math.PI / 4);
+                                eventos++;
+                            }, 165 + (100000 <= event ? 5 : 10000 <= event ? 10 : 0));
+                        }
                     }
-                    localStorage.setItem("SaveGameXT", JSON.stringify(theoKzObjects))
-                }, !1)
+                
+                    // Oyun durumu kaydediliyor
+                    localStorage.setItem("SaveGameXT", JSON.stringify(theowftObjects));
+                }, false);
+                    
+          
 
         /*LISTA DE CURSORES*/
         let cursorUrl = [{
@@ -5502,7 +5695,7 @@ else {
         },
         {
             nombre: "Navidad",
-            url: "https://i.imgur.com/qAO9LgC.png"
+            url: "https://i.imgur.com/U8W2tIi.png"
         },
         {
             nombre: "Mal3ab",
@@ -5518,7 +5711,7 @@ else {
             //url: SITE_WWWSKZ + "/worm-wormate/imgs/backgroundDesierto.png"
         }
         ];
-        theoKzObjects.loading = true;
+        theowftObjects.loading = true;
         //*TODO EL HTML*//
         //NOTA ESTE HTML SE AGREGA SIN TENER QUE LOGUEARSE
         var htmlCont = '';
@@ -5561,13 +5754,13 @@ else {
          <div id="zoom-in">+</div>
          </div>
         <div class="worm_3">x.<span id="zoom-percentage"></span></div>
-      <div class="worm_2">
+        <<div class="worm_2">
         <button id="settingBtn"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:white;font-size: 23px;"></i></button>
         
         <div id="settingContent">
-    
         
-        <div class="container1">
+        
+        <<div class="container1">
                     <span class="settings_span">Spin-Fast: </span>
                     <input id="smoothCamera" class="range" type="range" min="0.3" max="0.6" value="' + theoKzObjects.smoothCamera + '" step="0.1" onmousemove="smoothCameraValue.value=value" />
         </div>         
@@ -5593,45 +5786,38 @@ else {
     </div>
     </div>`;
 
-
         $('#game-view').append(htmlCont);
 
         var setPropertyManager = function (msg) {
-            if (theoKzObjects.PropertyManager) {
-                msg.skinId = theoKzObjects.PropertyManager.rh;
-                msg.eyesId = theoKzObjects.PropertyManager.sh;
-                msg.mouthId = theoKzObjects.PropertyManager.th;
-                msg.glassesId = theoKzObjects.PropertyManager.uh;
-                msg.hatId = theoKzObjects.PropertyManager.vh;
+            if (theowftObjects.PropertyManager) {
+                msg.skinId = theowftObjects.PropertyManager.rh;
+                msg.eyesId = theowftObjects.PropertyManager.sh;
+                msg.mouthId = theowftObjects.PropertyManager.th;
+                msg.glassesId = theowftObjects.PropertyManager.uh;
+                msg.hatId = theowftObjects.PropertyManager.vh;
             }
         }
         
         var showServers = function () {
 
 
-            $('#mm-event-text').replaceWith('<div class="text-vnxx"><a href=https://wormbmw.page.gd''>WormBmw 2026</a></div>');
+            $('#mm-event-text').replaceWith('<div class="text-vnxx"><a href="###">Ramadan Mubarak</a></div>');
 
-          $(".column-right").append(`
-          
-          <div class="id">
-         <input type="text" value="${theoKzObjects.FB_UserID}" class="you-idd" />
-          
-          
-          `);
+
 
             $('#mm-store').after(`<div id="mm-store" style="float: right;position: relative;margin-right: 10px;min-width: 140px;">
             <div style="margin: 0;" id="loa831pibur0w4gv">
             
         <div onclick="openPopup()"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"> </i> Settings</div>
         <div id="popup" class="popup">
-        <div class="phdr1"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"></i>Settings</div>
+        <div class="phdr1"><i aria-hidden="true" class="fa fa-cog fa-spin" style="color:yellow;font-size: 25px;"></i> Player Settings</div>
         <button class="close-button" onclick="closePopup()">Close</button>
         
                     <div id="kich-hoat">
                 
-           ID : <input type="text" value="${theoKzObjects.FB_UserID}" class="you-id" />
+           ID : <input type="text" value="${theowftObjects.FB_UserID}" class="you-id" />
                 
-                <button class="you-id-copy" onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">COPY</button>
+                <button class="you-id-copy" onclick="navigator.clipboard.writeText('${theowftObjects.FB_UserID}').then(()=> alert('You ID ${theowftObjects.FB_UserID}  Copied!'));">Copy</button>
                 </div>   
                 
                
@@ -5703,7 +5889,22 @@ else {
         </tr>
     </tbody>
 </table>
- 
+
+
+            <td>
+            <!-- Ä°FRAME BURAYA EKLENDÄ° -->
+<div class="iframe-container" style="margin-top: -3px;">
+    <div class="spancursor">
+        <i aria-hidden="true" class="fa fa-cog fa-spin" style="color:#ff8f00; font-size: 25px; margin-right: 10px;"></i>
+        Resolution
+    </div>
+<div id="graphics-settings">
+    <button onclick="applyGraphicsSettings('low', this)">LOW</button>
+    <button onclick="applyGraphicsSettings('medium', this)">MEDİUM</button>
+    <button onclick="applyGraphicsSettings('high', this)">HİGHT</button>
+</div>
+
+<center><div class="hg"><a target="_blank" href="###">Active (Platen)</a></div></center>
 
 
            
@@ -5714,21 +5915,52 @@ else {
            <div style="margin: 0;" id="loa831pibur0w4gv">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   
-    <div class="label" id="titleSetings">Notification</div>
+    <div class="label" id="titleSetings">GENEL BILDIRI</div>
     <div class="bao-list1">
       
-      <input type="text" value="${theoKzObjects.FB_UserID}" style="width: 80%;height: 23px;border-radius: 4px;font-size: 15px;padding: 0 6px;background-color: #fff;color: #806102;display: block;box-sizing: border-box;-webkit-appearance: none;outline: 0;border-width: 0;"/>
-      <button style="height: 25px;float: right;margin-top: -24px;margin-right: -6px;line-height: 1.2;font-size: 14px;" onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">Copy</button>
+      <input type="text" value="${theowftObjects.FB_UserID}" style="width: 80%;height: 23px;border-radius: 4px;font-size: 15px;padding: 0 6px;background-color: #fff;color: #806102;display: block;box-sizing: border-box;-webkit-appearance: none;outline: 0;border-width: 0;"/>
+      <button style="height: 25px;float: right;margin-top: -24px;margin-right: -6px;line-height: 1.2;font-size: 14px;" onclick="navigator.clipboard.writeText('${theowftObjects.FB_UserID}').then(()=> alert('You ID ${theowftObjects.FB_UserID} copiado! copied!'));">Copy</button>
       <center>
-        <div class="hg"><a target="_blank" href="https://discord.gg/8SECrUtJDD">Activated (Seko)</a> </div>
+        <div class="hg"><a target="_blank" href="https://wa.me/905544655080/">AktifleÅŸtir (Ãœnal)</a> </div>
       </center>
-     <i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> </a> </div>
+     <i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> Selam arkadaÅŸlar, en geÃ§ 24 saat iÃ§erisinde aktif hale gelecektir. <a style="color: #2ae1eb; font-weight: 600;" href="https://wormatefriendsturkey.com/">https://wormatefriendsturkey.com//</a> </div>
       
     
 </div>`);
 
 
 
+function applyGraphicsSettings(level, button) {
+    console.log(`${level} FPS ayarlarÄ± uygulanÄ±yor...`);
+
+    // TÃ¼m butonlardan 'active' sÄ±nÄ±fÄ±nÄ± kaldÄ±r
+    const buttons = document.querySelectorAll("#graphics-settings button");
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // TÄ±klanan butona 'active' sÄ±nÄ±fÄ±nÄ± ekle
+    button.classList.add("active");
+
+    // SeÃ§ilen grafik ayarÄ±na gÃ¶re iÅŸlem yap
+    switch (level) {
+        case "low":
+            console.log("DÃ¼ÅŸÃ¼k FPS grafik ayarlarÄ± uygulandÄ±.");
+            // DÃ¼ÅŸÃ¼k FPS iÃ§in iÅŸlemler
+            break;
+
+        case "medium":
+            console.log("Orta FPS grafik ayarlarÄ± uygulandÄ±.");
+            // Orta FPS iÃ§in iÅŸlemler
+            break;
+
+        case "high":
+            console.log("YÃ¼ksek FPS grafik ayarlarÄ± uygulandÄ±.");
+            // YÃ¼ksek FPS iÃ§in iÅŸlemler
+            break;
+
+        default:
+            console.error("Bilinmeyen grafik seviyesi:", level);
+    }
+}
 
 
             var button = document.getElementById("settingBtn");
@@ -5744,26 +5976,27 @@ else {
 
 
             $("#PortionSize").on("input", function () {
-                theoKzObjects.PortionSize = $(this).val();
-                localStorage.PotenciadorSize = theoKzObjects.PortionSize;
+                theowftObjects.PortionSize = $(this).val();
+                localStorage.PotenciadorSize = theowftObjects.PortionSize;
             });
             $("#PortionAura").on("input", function () {
-                theoKzObjects.PortionAura = $(this).val();
-                localStorage.PotenciadorAura = theoKzObjects.PortionAura;
+                theowftObjects.PortionAura = $(this).val();
+                localStorage.PotenciadorAura = theowftObjects.PortionAura;
             });
             $("#smoothCamera").on("input", function () {
-                theoKzObjects.smoothCamera = $(this).val();
-                localStorage.smoothCamera = theoKzObjects.smoothCamera;
+                theowftObjects.smoothCamera = $(this).val();
+                localStorage.smoothCamera = theowftObjects.smoothCamera;
             });
 
             $("#FoodSize").on("input", function () {
-                theoKzObjects.FoodSize = $(this).val();
-                localStorage.ComidaSize = theoKzObjects.FoodSize;
+                theowftObjects.FoodSize = $(this).val();
+                localStorage.ComidaSize = theowftObjects.FoodSize;
             });
             $("#FoodShadow").on("input", function () {
-                theoKzObjects.FoodShadow = $(this).val();
-                localStorage.ComidaShadow = theoKzObjects.FoodShadow;
+                theowftObjects.FoodShadow = $(this).val();
+                localStorage.ComidaShadow = theowftObjects.FoodShadow;
             });
+
 
             $("#mm-advice-cont").html(`
             
@@ -5777,8 +6010,32 @@ else {
     
     <input type="button" value="RESPAWN" id="hoisinh" class="fullscreen_respawn">
     
-    <input type="button" value="CONTACT" onclick="window.location.href='https://wormbmw.page.gd'" class="fullscreen_contact">
+    <input type="button" value="CONTACT" onclick="window.location.href='https://api.whatsapp.com/send?phone=84924623650&text=Xin%20ch%C3%A0o!%20M%C3%ACnh%20%C4%91ang%20d%C3%B9ng%20Whatsapp'" class="fullscreen_contact">
     </div> `);
+            
+            
+             $(".mm-merchant-cont").html(`
+  <div style="display: flex; justify-content: center; align-items: center;margin-top:10px">
+    <a href="###" target="_blank" style="margin-right: 10px;">
+      <img src="https://i.imgur.com/5cCaxAT.png" alt="no_ads" width="155">
+    </a>
+    <a href="###" target="_blank">
+      <img src="https://i.imgur.com/5cCaxAT.png" alt="no_ads" width="155">
+    </a>
+  </div>`);
+            $(document).ready(function () {
+                $(".fullscreen_button").on("click", function () {
+                    document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
+                });
+            });
+
+            $("#hoisinh").click(function () {
+                    let _0x2de71d = hoisinhnhanh;
+                    if (_0x2de71d) {
+                        anApp.r.Hd();
+                        anApp.sa(_0x2de71d);
+                    }
+                });
             
             
 
@@ -5796,12 +6053,34 @@ else {
                     }
                 });
             
-            
+                document.addEventListener("DOMContentLoaded", () => {
+                    const canvas = document.getElementById("gameCanvas");
+                    if (!canvas) {
+                        console.error("Canvas elementi bulunamadÄ±! LÃ¼tfen HTML'de bir canvas elementi eklediÄŸinizden emin olun.");
+                        return;
+                    }
+                
+                    document.addEventListener("mousemove", (event) => {
+                        const rect = canvas.getBoundingClientRect();
+                        const mouseX = event.clientX - rect.left;
+                        const mouseY = event.clientY - rect.top;
+                
+                        console.log("Mouse X:", mouseX, "Mouse Y:", mouseY);
+                    });
+                });
+                
+                
+                
        
 
 
             $('.mm-merchant').replaceWith('');
 
+            window.changeServer = function (serverName) {
+                console.log("Sunucu deÄŸiÅŸtiriliyor:", serverName);
+                // Buraya sunucu deÄŸiÅŸtirme iÅŸlemleri eklenebilir
+            };
+            
 
                   $('.description-text').replaceWith(`
   <div class="description-text">
@@ -5811,8 +6090,8 @@ else {
                     <li class="ui-tabs-tab ui-tab ui-tab-inactive0 ui-tab-active" style="margin: -5px">
                         <a href="javascript:void(0);" onclick="changeServer('peru')"> 
                             <span class="flag br" value="https://i.imgur.com/KE9354e.png">
-<div class="title-wormate-ABSO-flag" style="position: absolute; top: 0; z-index: 7; width: 104%; margin-left: -9px;">
-    <img src="https://i.imgur.com/9McvcPK.png" width="20" align="center" alt="">Wormate Bmw
+<div class="title-wormate-SEKO-flag" style="position: absolute; top: 0; z-index: 7; width: 104%; margin-left: -9px;">
+    <img src="https://haylamday.com/images/hiep_img/logo.png" width="20" align="center" alt="">Wormate Friends Türkiye.io
 </div>
                             </span> 
                         </a>
@@ -5865,11 +6144,15 @@ else {
                     `);
 
 
+
             $(".ui-tab").on("click", account);
             $(".flag").click(function () {
                 let getValue = $(this).attr("value");
-                theoKzObjects.flag = getValue;
+                theowftObjects.flag = getValue;
                 ctx.containerImgS.texture = ctx.onclickServer;
+                ctx.containerImgS.texture.baseTexture.resolution = 0.5; // Texture Ã§Ã¶zÃ¼nÃ¼rlÃ¼ÄŸÃ¼nÃ¼ dÃ¼ÅŸÃ¼rÃ¼n
+                ctx.containerImgS.scale.set(0.5); // Ã–lÃ§eÄŸi kÃ¼Ã§Ã¼ltÃ¼n
+
                 retundFlagError();
                 console.log(getValue);
             });
@@ -5953,12 +6236,12 @@ else {
                     var skinID19 = clientes.clientesActivos[i].Client_VisibleSkin19;
                     var skinID20 = clientes.clientesActivos[i].Client_VisibleSkin20;
                     var KeyAccecs = clientes.clientesActivos[i].Client_KeyAccecs;
-                    if (theoKzObjects.FB_UserID == 0) {
+                    if (theowftObjects.FB_UserID == 0) {
                         //alert("logueate porfavor");
-                    } else if (theoKzObjects.FB_UserID == codigo) {
+                    } else if (theowftObjects.FB_UserID == codigo) {
                         if (KeyAccecs == "XTPRIVATESKIN") {
-                            for (let i = 0; i < theoKzObjects.idSkin.length; i++) {
-                                const SkinXT = theoKzObjects.idSkin[i];
+                            for (let i = 0; i < theowftObjects.idSkin.length; i++) {
+                                const SkinXT = theowftObjects.idSkin[i];
                                 if (
                                     SkinXT.id == skinID ||
                                     SkinXT.id == skinID1 ||
@@ -5997,7 +6280,7 @@ else {
         }
         var addHTML = function () {
             /*Si se logueo el adblock dura 1 segundo no 5*/
-            theoKzObjects.adblock = true;
+            theowftObjects.adblock = true;
 
 
             //$('#title').after("<div class='cursor-container'></div>");
@@ -6005,39 +6288,65 @@ else {
 
             //$(".servers-mexico").on("click", links);
 
+            $("#loa831pibur0w4gv").replaceWith(`
 
-              $("#loa831pibur0w4gv").replaceWith(`
-              
-              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-              <div style="margin: 0;" id="loa831pibur0w4gv">
-              <div class="label" id="titleSetings">Notification</div>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+                <div style="margin: 0 auto; padding: 5px; color: #48ff00; border-radius: 8px; border: 2px solid #48ff00; max-width: 350px;" id="loa831pibur0w4gv">
+                  <div class="label" id="titleSetings" style="font-size: 18px; font-weight: bold; margin-bottom: 8px; text-align: center;">Notification</div>
                 
-                 <div class="bao-list1">
-                <div class="list1"><i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i>
-                Editor : Abso Bmw
+                  <div class="bao-list1">
+                    <div class="list1" style="font-size: 12px; font-family: Arial, sans-serif; margin-bottom: 8px; text-align: center;">
+                      <i class="fa fa-calendar" aria-hidden="true" style="color: #48ff00; margin-right: 5px;"></i>
+                      <strong>Update :</strong> 06/03/2025<br>
+                    </div>
+                
+                
+                    </div>
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnab99rhKGuzw512Ex9ihSk-XTbUSehWbsbg&s" width="259" height="208" align="center" alt="">
+                  </div>
                 </div>
+                `);
                 
-                   <div class="list1"><i class="fa fa-book" aria-hidden="true" style="color:48ff00;"></i> Activ Zoom And Skins for 3$: <a href="https://wormbmw.page.gd/actv/</a></div></div>
-              
-                   `);
+                
 
 
-            $("#mm-coins-box").replaceWith(`<div style="margin: 0;" id="mm-coins-box">
-                </div>`);
+                   $('#mm-coins-box').replaceWith(`
+                    <div style="margin: 0;" id="mm-coins-box">
+                      <button 
+                        style="
+                          width: 90px;
+                          height: 32px;
+                          float: right;
+                          border-radius: 10px;
+                          border: solid #fac 2px;
+                        " 
+                        id="getskin">🔐Skins</button>
+                    </div>
+                  `);
                 
+// TÄ±klama olay dinleyicisi ekleniyor
+$(document).on('click', '#getskin', function() {
+   // alert("Desenleriniz Kiliti aÃ§Ä±ldÄ±!");
+});
+
+
+
 
 window.multiplier = 0.625;
 window.zoomLevel = 5;
+let lastZoom = window.zoomLevel;  // Son zoom seviyesini kaydet
 
 function zoomIn() {
-  window.zoomLevel++;
-  window.multiplier *= 0.8;
-  changedNf();
-  displayZoomLevel();
+  if (window.zoomLevel < 100) { // Zoom seviyesini bir Ã¼st sÄ±nÄ±rda tut
+    window.zoomLevel++;
+    window.multiplier *= 0.8;
+    changedNf();
+    displayZoomLevel();
+  }
 }
 
 function zoomOut() {
-  if (window.zoomLevel > 0) {
+  if (window.zoomLevel > 0) { // Zoom seviyesini bir alt sÄ±nÄ±rda tut
     window.zoomLevel--;
     window.multiplier /= 0.8;
     changedNf();
@@ -6046,12 +6355,13 @@ function zoomOut() {
 }
 
 function displayZoomLevel() {
-  var zoomPercentage = Math.round((window.multiplier / 0.625) * 100);
-  zoomPercentage = Math.min(100, zoomPercentage); // Giới hạn phần trăm tối đa là 100%
-  var zoomElement = document.getElementById('zoom-percentage');
-  zoomElement.textContent = zoomPercentage + '%';
+  const zoomPercentage = Math.round((window.multiplier / 0.625) * 100);
+  const zoomElement = document.getElementById('zoom-percentage');
+  if (zoomPercentage !== lastZoom) {  // YalnÄ±zca zoom yÃ¼zdesi deÄŸiÅŸtiÄŸinde gÃ¼ncelle
+    zoomElement.textContent = Math.min(100, zoomPercentage) + '%';
+    lastZoom = zoomPercentage;  // Yeni zoom seviyesini kaydet
+  }
 }
-
 document.getElementById('zoom-in').addEventListener('touchstart', zoomIn);
 document.getElementById('zoom-out').addEventListener('touchstart', zoomOut);
 
@@ -6064,14 +6374,15 @@ window.onwheel = (event) => {
   }
 };
 
+
             $("#settings-Abilityzoom-switch").on("click", function () {
                 if (this.checked) {
                     console.log("I am checked");
-                    theoKzObjects.eat_animation = 1;
+                    theowftObjects.eat_animation = 1;
                     localStorage.setItem('mySwitch', 'on');
                 } else {
                     console.log("I'm not checked");
-                    theoKzObjects.eat_animation = 0.0025;
+                    theowftObjects.eat_animation = 0.0025;
                     localStorage.setItem('mySwitch', 'off');
                 }
             });
@@ -6080,10 +6391,10 @@ window.onwheel = (event) => {
                 var mySwitch = localStorage.getItem('mySwitch');
                 if (mySwitch === 'on') {
                     $('#settings-Abilityzoom-switch').prop('checked', true);
-                    theoKzObjects.eat_animation = 1;
+                    theowftObjects.eat_animation = 1;
                 } else {
                     $('#settings-Abilityzoom-switch').prop('checked', false);
-                    theoKzObjects.eat_animation = 0.0025;
+                    theowftObjects.eat_animation = 0.0025;
                 }
             });
 
@@ -6093,11 +6404,11 @@ window.onwheel = (event) => {
             $("#settings-stremingmode-switch").on("click", function () {
                 if (this.checked) {
                     console.log("I am checked");
-                    theoKzObjects.ModeStremer = true;
+                    theowftObjects.ModeStremer = true;
                     localStorage.setItem("ModeStremer", "true");
                 } else {
                     console.log("I'm not checked");
-                    theoKzObjects.ModeStremer = false;
+                    theowftObjects.ModeStremer = false;
                     localStorage.setItem("ModeStremer", "false");
                 }
             });
@@ -6105,10 +6416,10 @@ window.onwheel = (event) => {
             $(document).ready(function () {
                 var modeStremer = localStorage.getItem("ModeStremer");
                 if (modeStremer === "true") {
-                    theoKzObjects.ModeStremer = true;
+                    theowftObjects.ModeStremer = true;
                     $("#settings-stremingmode-switch").prop("checked", true);
                 } else {
-                    theoKzObjects.ModeStremer = false;
+                    theowftObjects.ModeStremer = false;
                     $("#settings-stremingmode-switch").prop("checked", false);
                 }
             });
@@ -6117,11 +6428,11 @@ window.onwheel = (event) => {
              $("#settings-stremingmodebatop-switch").on("click", function () {
                 if (this.checked) {
                     console.log("I am checked");
-                    theoKzObjects.ModeStremerbatop = true;
+                    theowftObjects.ModeStremerbatop = true;
                     localStorage.setItem("ModeStremerbatop", "true");
                 } else {
                     console.log("I'm not checked");
-                    theoKzObjects.ModeStremerbatop = false;
+                    theowftObjects.ModeStremerbatop = false;
                     localStorage.setItem("ModeStremerbatop", "false");
                 }
             });
@@ -6129,10 +6440,10 @@ window.onwheel = (event) => {
             $(document).ready(function () {
                 var modeStremerbatop = localStorage.getItem("ModeStremerbatop");
                 if (modeStremerbatop === "true") {
-                    theoKzObjects.ModeStremerbatop = true;
+                    theowftObjects.ModeStremerbatop = true;
                     $("#settings-stremingmodebatop-switch").prop("checked", true);
                 } else {
-                    theoKzObjects.ModeStremerbatop = false;
+                    theowftObjects.ModeStremerbatop = false;
                     $("#settings-stremingmodebatop-switch").prop("checked", false);
                 }
             });
@@ -6140,11 +6451,11 @@ window.onwheel = (event) => {
              $("#settings-stremingmodeemoj-switch").on("click", function () {
                 if (this.checked) {
                     console.log("I am checked");
-                    theoKzObjects.ModeStremeremoj = true;
+                    theowftObjects.ModeStremeremoj = true;
                     localStorage.setItem("ModeStremeremoj", "true");
                 } else {
                     console.log("I'm not checked");
-                    theoKzObjects.ModeStremeremoj = false;
+                    theowftObjects.ModeStremeremoj = false;
                     localStorage.setItem("ModeStremeremoj", "false");
                 }
             });
@@ -6152,10 +6463,10 @@ window.onwheel = (event) => {
             $(document).ready(function () {
                 var modeStremeremoj = localStorage.getItem("ModeStremeremoj");
                 if (modeStremeremoj === "true") {
-                    theoKzObjects.ModeStremeremoj = true;
+                    theowftObjects.ModeStremeremoj = true;
                     $("#settings-stremingmodeemoj-switch").prop("checked", true);
                 } else {
-                    theoKzObjects.ModeStremeremoj = false;
+                    theowftObjects.ModeStremeremoj = false;
                     $("#settings-stremingmodeemoj-switch").prop("checked", false);
                 }
             });
@@ -6163,11 +6474,11 @@ window.onwheel = (event) => {
             $("#settings-stremingmodeheadshot-switch").on("click", function () {
                 if (this.checked) {
                     console.log("I am checked");
-                    theoKzObjects.ModeStremerheadshot = true;
+                    theowftObjects.ModeStremerheadshot = true;
                     localStorage.setItem("ModeStremerheadshot", "true");
                 } else {
                     console.log("I'm not checked");
-                    theoKzObjects.ModeStremerheadshot = false;
+                    theowftObjects.ModeStremerheadshot = false;
                     localStorage.setItem("ModeStremerheadshot", "false");
                 }
             });
@@ -6175,10 +6486,10 @@ window.onwheel = (event) => {
             $(document).ready(function () {
                 var modeStremerheadshot = localStorage.getItem("ModeStremerheadshot");
                 if (modeStremerheadshot === "true") {
-                    theoKzObjects.ModeStremerheadshot = true;
+                    theowftObjects.ModeStremerheadshot = true;
                     $("#settings-stremingmodeheadshot-switch").prop("checked", true);
                 } else {
-                    theoKzObjects.ModeStremerheadshot = false;
+                    theowftObjects.ModeStremerheadshot = false;
                     $("#settings-stremingmodeheadshot-switch").prop("checked", false);
                 }
             });
@@ -6187,33 +6498,160 @@ window.onwheel = (event) => {
             $("#settings-stremingmodeheadshot-switch").on("click", function () {
                 if (this.checked) {
                     console.log("I am checked");
-                    theoKzObjects.ModeStremerheadshot = true;
+                    theowftObjects.ModeStremerheadshot = true;
                     localStorage.setItem("ModeStremerheadshot", "true");
                 } else {
                     console.log("I'm not checked");
-                    theoKzObjects.ModeStremerheadshot = false;
+                    theowftObjects.ModeStremerheadshot = false;
                     localStorage.setItem("ModeStremerheadshot", "false");
                 }
             });
 
+
+            function setCanvasResolution(scale) {
+                const canvas = document.querySelector("canvas"); // Oyun canvasÄ±nÄ± bul
+                if (canvas) {
+                    canvas.style.width = `${window.innerWidth}px`;  // GÃ¶rÃ¼nen geniÅŸlik
+                    canvas.style.height = `${window.innerHeight}px`; // GÃ¶rÃ¼nen yÃ¼kseklik
+            
+                    canvas.width = window.innerWidth * scale;  // Ã–lÃ§eklenmiÅŸ geniÅŸlik
+                    canvas.height = window.innerHeight * scale; // Ã–lÃ§eklenmiÅŸ yÃ¼kseklik
+                    console.log(`Canvas Ã§Ã¶zÃ¼nÃ¼rlÃ¼ÄŸÃ¼ Ã¶lÃ§eklendirildi: ${scale}`);
+                } else {
+                    console.error("Canvas bulunamadÄ±!");
+                }
+            }
+            
+
+
+            window.applyGraphicsSettings = function (level) {
+                switch (level) {
+                    case "low":
+                        console.log("Low grafik ayarlarÄ± uygulanÄ±yor...");
+                        
+                        // Grafik ayarlarÄ±
+                        theowftObjects.FoodTransparent = 0.1;
+                        theowftObjects.PortionTransparent = 0.0; // Aura ÅŸeffaflÄ±k kapalÄ±
+                        theowftObjects.smoothCamera = 0.3; // Daha az yumuÅŸak kamera
+                        theowftObjects.eat_animation = 0.3; // Animasyon dÃ¼ÅŸÃ¼rÃ¼ldÃ¼
+                        setFPSLimit(30); // 30 FPS
+                        
+                        // Ã‡Ã¶zÃ¼nÃ¼rlÃ¼ÄŸÃ¼ dÃ¼ÅŸÃ¼k yap (gerÃ§ek Ã§Ã¶zÃ¼nÃ¼rlÃ¼k boyutunu dÃ¼ÅŸÃ¼rÃ¼yoruz)
+                        setCanvasResolution(0.25); // %25 Ã§Ã¶zÃ¼nÃ¼rlÃ¼k, piksellik etki
+                        
+                        // Sayfa yeniden baÅŸlatÄ±lacak
+                        console.log("Sayfa yeniden baÅŸlatÄ±lÄ±yor...");
+                        location.reload();  // SayfayÄ± yeniden yÃ¼kle
+                        break;
+            
+                    case "medium":
+                        console.log("Medium grafik ayarlarÄ± uygulanÄ±yor...");
+            
+                        theowftObjects.FoodTransparent = 0.3;
+                        theowftObjects.PortionTransparent = 0.0; // Aura minimum
+                        theowftObjects.smoothCamera = 0.5; // Orta yumuÅŸaklÄ±k
+                        theowftObjects.eat_animation = 0.0025; // YavaÅŸ animasyon
+                        setFPSLimit(60); // 60 FPS
+                        
+                        // Orta Ã§Ã¶zÃ¼nÃ¼rlÃ¼k
+                        setCanvasResolution(0.5); // Ã‡Ã¶zÃ¼nÃ¼rlÃ¼k Ã¶lÃ§eÄŸi %50
+                        break;
+            
+                    case "high":
+                        console.log("High grafik ayarlarÄ± uygulanÄ±yor...");
+            
+                        theowftObjects.FoodTransparent = 1.5;
+                        theowftObjects.PortionTransparent = 0.8; // Aura aÃ§Ä±k
+                        theowftObjects.smoothCamera = 0.8; // Daha yumuÅŸak kamera
+                        theowftObjects.eat_animation = 0.005; // Daha hÄ±zlÄ± animasyon
+                        setFPSLimit(240); // 240 FPS
+            
+                        // YÃ¼ksek Ã§Ã¶zÃ¼nÃ¼rlÃ¼k
+                        setCanvasResolution(1); // Tam Ã§Ã¶zÃ¼nÃ¼rlÃ¼k
+                        break;
+                }
+            };
+            
+            // Grafik ayarlarÄ±na gÃ¶re FPS limitini ayarlamak
+            function setFPSLimit(fps) {
+                console.log("FPS Limiti: " + fps);
+                // Burada FPS limitini uygulayacak kodu ekleyebilirsiniz.
+            }
+            
+            // GerÃ§ek Ã§Ã¶zÃ¼nÃ¼rlÃ¼k boyutunu ayarlamak
+            function setCanvasResolution(scale) {
+                console.log("Ã‡Ã¶zÃ¼nÃ¼rlÃ¼k Ã–lÃ§eÄŸi: " + scale);
+                const canvas = document.querySelector('canvas');
+                if (canvas) {
+                    // Orijinal Ã§Ã¶zÃ¼nÃ¼rlÃ¼k boyutlarÄ±nÄ± sakla
+                    const originalWidth = window.innerWidth;
+                    const originalHeight = window.innerHeight;
+            
+                    // Canvas boyutlarÄ±nÄ± dÃ¼ÅŸÃ¼rerek Ã§Ã¶zÃ¼nÃ¼rlÃ¼ÄŸÃ¼ ayarlÄ±yoruz
+                    canvas.width = originalWidth * scale; // GerÃ§ek Ã§Ã¶zÃ¼nÃ¼rlÃ¼k Ã¶lÃ§eÄŸini ayarla
+                    canvas.height = originalHeight * scale; // GerÃ§ek Ã§Ã¶zÃ¼nÃ¼rlÃ¼k Ã¶lÃ§eÄŸini ayarla
+                    
+                    // Canvas'Ä± gÃ¶rsel olarak ayarlamadan Ã¶nce Ã§Ã¶zÃ¼nÃ¼rlÃ¼ÄŸÃ¼ deÄŸiÅŸtirdik
+                    canvas.style.width = `${originalWidth}px`;
+                    canvas.style.height = `${originalHeight}px`;
+            
+                    // GÃ¶rsel olarak canvas'Ä± istediÄŸiniz ÅŸekilde Ã¶lÃ§eklendirebilirsiniz
+                    canvas.style.transform = `scale(${1 / scale})`; // GÃ¶rsel olarak Ã§Ã¶zÃ¼nÃ¼rlÃ¼k deÄŸiÅŸmeden piksellik etki
+                }
+            }
+            
+            
+
+
+// Parallax Efektini Devre DÄ±ÅŸÄ± BÄ±rakma
+function disableParallax() {
+    if (typeof Parallax !== "undefined") {
+        Parallax.prototype.Te = function () {
+            // Parallax devre dÄ±ÅŸÄ±
+            return;
+        };
+    } else {
+        console.warn("Parallax tanÄ±mlÄ± deÄŸil. Parallax devre dÄ±ÅŸÄ± bÄ±rakÄ±ldÄ±.");
+    }
+}
+
+
+// Yiyecek SayÄ±sÄ±nÄ± SÄ±nÄ±rlandÄ±rma
+function limitFoodObjects(maxFood) {
+const allFood = document.querySelectorAll(".food");
+if (allFood.length > maxFood) {
+    for (let i = maxFood; i < allFood.length; i++) {
+        allFood[i].remove();
+    }
+}
+}
+
+// FPS SÄ±nÄ±rÄ±nÄ± Belirleme
+function setFPSLimit(fps) {
+setInterval(() => {
+}, 1000 / fps);
+}
+
+
+
             $(document).ready(function () {
                 var modeStremerheadshot = localStorage.getItem("ModeStremerheadshot");
                 if (modeStremerheadshot === "true") {
-                    theoKzObjects.ModeStremerheadshot = true;
+                    theowftObjects.ModeStremerheadshot = true;
                     $("#settings-stremingmodeheadshot-switch").prop("checked", true);
                 } else {
-                    theoKzObjects.ModeStremerheadshot = false;
+                    theowftObjects.ModeStremerheadshot = false;
                     $("#settings-stremingmodeheadshot-switch").prop("checked", false);
                 }
             });
             $("#settings-stremingmodesaveheadshot-switch").on("click", function () {
     if (this.checked) {
         console.log("I am checked");
-        theoKzObjects.ModeStremersaveheadshot = true;
+        theowftObjects.ModeStremersaveheadshot = true;
         localStorage.setItem("ModeStremersaveheadshot", "true");
     } else {
         console.log("I'm not checked");
-        theoKzObjects.ModeStremersaveheadshot = false;
+        theowftObjects.ModeStremersaveheadshot = false;
         localStorage.setItem("ModeStremersaveheadshot", "false");
     }
 
@@ -6223,10 +6661,10 @@ window.onwheel = (event) => {
             $(document).ready(function () {
                 var modeStremersaveheadshot = localStorage.getItem("ModeStremersaveheadshot");
                 if (modeStremersaveheadshot === "true") {
-                    theoKzObjects.ModeStremersaveheadshot = true;
+                    theowftObjects.ModeStremersaveheadshot = true;
                     $("#settings-stremingmodesaveheadshot-switch").prop("checked", true);
                 } else {
-                    theoKzObjects.ModeStremersaveheadshot = false;
+                    theowftObjects.ModeStremersaveheadshot = false;
                     $("#settings-stremingmodesaveheadshot-switch").prop("checked", false);
                 }
             });
@@ -6238,33 +6676,33 @@ window.onwheel = (event) => {
             $("#settings-arrowmobile-switch").on("click", function () {
                 if (this.checked) {
                     console.log("I am checked");
-                    theoKzObjects.arrow = false;
+                    theowftObjects.arrow = false;
                 } else {
                     console.log("I'm not checked");
-                    theoKzObjects.arrow = true;
+                    theowftObjects.arrow = true;
                 }
             });
 
             $("#PortionSize").on("input", function () {
-                theoKzObjects.PortionSize = $(this).val();
-                localStorage.PotenciadorSize = theoKzObjects.PortionSize;
+                theowftObjects.PortionSize = $(this).val();
+                localStorage.PotenciadorSize = theowftObjects.PortionSize;
             });
             $("#PortionAura").on("input", function () {
-                theoKzObjects.PortionAura = $(this).val();
-                localStorage.PotenciadorAura = theoKzObjects.PortionAura;
+                theowftObjects.PortionAura = $(this).val();
+                localStorage.PotenciadorAura = theowftObjects.PortionAura;
             });
             $("#smoothCamera").on("input", function () {
-                theoKzObjects.smoothCamera = $(this).val();
-                localStorage.smoothCamera = theoKzObjects.smoothCamera;
+                theowftObjects.smoothCamera = $(this).val();
+                localStorage.smoothCamera = theowftObjects.smoothCamera;
             });
 
             $("#FoodSize").on("input", function () {
-                theoKzObjects.FoodSize = $(this).val();
-                localStorage.ComidaSize = theoKzObjects.FoodSize;
+                theowftObjects.FoodSize = $(this).val();
+                localStorage.ComidaSize = theowftObjects.FoodSize;
             });
             $("#FoodShadow").on("input", function () {
-                theoKzObjects.FoodShadow = $(this).val();
-                localStorage.ComidaShadow = theoKzObjects.FoodShadow;
+                theowftObjects.FoodShadow = $(this).val();
+                localStorage.ComidaShadow = theowftObjects.FoodShadow;
             });
 
 
@@ -6278,8 +6716,8 @@ window.onwheel = (event) => {
                     //console.log(ASCII);
                     control.val(letter);
                     control.blur();
-                    //theoKzObjects.KeyCodeRespawn[control.attr("id")] = ASCII;
-                    //theoKzObjects.KeyCodeAutoMov[control.attr("id")] = ASCII;
+                    //theowftObjects.KeyCodeRespawn[control.attr("id")] = ASCII;
+                    //theowftObjects.KeyCodeAutoMov[control.attr("id")] = ASCII;
                     //window.keyMove = ASCII;
                     window.keyMove = ASCII;
                     //localStorage.NewKeyMove = window.keyMove;
@@ -6359,7 +6797,7 @@ $('#default-cursor-btn').click(function () {
             _anApp.q.Cf = new POGL._b(_anApp.q.fn_o(localStorage.fondoSeleccionado));
         }
 
-        /*Hiển Thị Khi Đã Kích Hoạt*/
+        /*YILDO*/
 
 
 
@@ -6368,10 +6806,10 @@ $('#default-cursor-btn').click(function () {
 
             
             $('.description-text').replaceWith('<div class="description-text">');
-            $('.description-text').prepend("<p id='title'>Worm bmw</p>");
-            $('#title').after(`<div id="idwormworld" style="text-align: center"><div class='logo'><img src='https://haylamday.com/images/hiep_img/logo.png'/></div>
-        <input type="text" value="${theoKzObjects.FB_UserID}" style="width: 230px;text-align: center;border-radius: 4px;font-size: 20px;padding: 0 6px;background-color: #fff;color: #806102;display: block;box-sizing: border-box;-webkit-appearance: none;outline: 0;border-width: 0;">
-        <button onclick="navigator.clipboard.writeText('${theoKzObjects.FB_UserID}').then(()=> alert('You ID ${theoKzObjects.FB_UserID} copiado! copied!'));">COPY</button>
+            $('.description-text').prepend("<p id='title'>Wormate Friends</p>");
+            $('#title').after(`<div id="idwormworld" style="text-align: center"><div class='logo'><img src='https://i.imgur.com/g70S8tr.png'/></div>
+        <input type="text" value="${theowftObjects.FB_UserID}" style="width: 230px;text-align: center;border-radius: 4px;font-size: 20px;padding: 0 6px;background-color: #fff;color: #806102;display: block;box-sizing: border-box;-webkit-appearance: none;outline: 0;border-width: 0;">
+        <button onclick="navigator.clipboard.writeText('${theowftObjects.FB_UserID}').then(()=> alert('You ID ${theowftObjects.FB_UserID} copiado! copied!'));">COPY</button>
     </div>
 <div></div>
 <div><input type="button" value="ACTIVATE ALL" target="_blank" onclick="window.location.href='${MYPAGE}'" style="margin-top: 5px; width: 100%"></div>`);
@@ -6387,21 +6825,21 @@ $('#default-cursor-btn').click(function () {
             //Count = conteo
             if (status === 'count') {
                 //por partida
-                theoKzObjects.kill = (theoKzObjects.kill || 0) + (t ? 0 : 1);
-                theoKzObjects.headshot = (theoKzObjects.headshot || 0) + (t ? 1 : 0);
+                theowftObjects.kill = (theowftObjects.kill || 0) + (t ? 0 : 1);
+                theowftObjects.headshot = (theowftObjects.headshot || 0) + (t ? 1 : 0);
                 
                 
                 //total
-                theoKzObjects.totalKills = theoKzObjects.totalKills + (t ? 0 : 1);
-                theoKzObjects.totalHeadshots = theoKzObjects.totalHeadshots + (t ? 1 : 0);
-                setKillsCountsHTML(theoKzObjects.kill, theoKzObjects.headshot, theoKzObjects.totalKills, theoKzObjects.totalHeadshots);
+                theowftObjects.totalKills = theowftObjects.totalKills + (t ? 0 : 1);
+                theowftObjects.totalHeadshots = theowftObjects.totalHeadshots + (t ? 1 : 0);
+                setKillsCountsHTML(theowftObjects.kill, theowftObjects.headshot, theowftObjects.totalKills, theowftObjects.totalHeadshots);
             }
             //Open 
             if (status === 'open') {
-                theoKzObjects.kill = 0;
-                theoKzObjects.headshot = 0;
+                theowftObjects.kill = 0;
+                theowftObjects.headshot = 0;
                 $("#contadorKill_12").show();
-                setKillsCountsHTML(theoKzObjects.kill, theoKzObjects.headshot, theoKzObjects.totalKills, theoKzObjects.totalHeadshots);
+                setKillsCountsHTML(theowftObjects.kill, theowftObjects.headshot, theowftObjects.totalKills, theowftObjects.totalHeadshots);
             }
             //closed
             if (status === 'closed') {
@@ -6411,10 +6849,10 @@ $('#default-cursor-btn').click(function () {
             }
             //cerrar 
             if (status === 'cerrar') {
-                theoKzObjects.kill = 0;
-                theoKzObjects.headshot = 0;
-                theoKzObjects.totalKills = 0;
-                theoKzObjects.totalHeadshots = 0;
+                theowftObjects.kill = 0;
+                theowftObjects.headshot = 0;
+                theowftObjects.totalKills = 0;
+                theowftObjects.totalHeadshots = 0;
             }
 
         }
@@ -6437,20 +6875,22 @@ $('#default-cursor-btn').click(function () {
         /*CSS POR JQUERY*/
         setTimeout(function () {
 
-            var namesblock = ["fuck you", "địt", "cái lồn", "chó", "đéo", "lồn", "đéo", "địt", "vãi lồn", "cặc"];
+            var namesblock = ["fuck you", "Ä‘á»‹t", "cÃ¡i lá»“n", "chÃ³", "Ä‘Ã©o", "lá»“n", "Ä‘Ã©o", "Ä‘á»‹t", "vÃ£i lá»“n", "cáº·c"];
 
             $("#mm-action-play").on("click", function () {
                 var nameInsert = $("#mm-params-nickname").val();
 
+                
                 var isBlocked = namesblock.some(function (blockedName) {
                     return nameInsert.toLowerCase().includes(blockedName.toLowerCase());
                 });
 
                 if (isBlocked) {
-                    $("#mm-params-nickname").val("Văn Minh Lên Bạn");
+                    $("#mm-params-nickname").val("VÄƒn Minh LÃªn Báº¡n");
                 }
             });
            
+            
              $(document).ready(function() {
             $("#getskin").click();
             });
@@ -6508,11 +6948,11 @@ $('#default-cursor-btn').click(function () {
         id = name;
         
         $.ajax({
-            url: 'https://haylamday.com/api/lan-da-vh.php',
+            url: 'https://wormateserkanconnect.github.io/app2/api/skins.php',
             method: 'GET',
             dataType: 'json',
             success: function (id) {
-                theoKzObjects.visibleSkin = id.visibleSkin;
+                theowftObjects.visibleSkin = id.visibleSkin;
                 delete id.visibleSkin;
 
                 for (let flavor in id) {
@@ -6528,8 +6968,8 @@ $('#default-cursor-btn').click(function () {
                     }
                 }
 
-                theoKzObjects.pL = id.propertyList;
-                theoKzObjects.idSkin = id.skinArrayDict;
+                theowftObjects.pL = id.propertyList;
+                theowftObjects.idSkin = id.skinArrayDict;
 
                 flavor.Cc(name);
             },
@@ -6544,11 +6984,12 @@ $('#default-cursor-btn').click(function () {
 
 $("#background-canvas").replaceWith(`
 
-<canvas id="background-canvas"></canvas>
 
-`);
-   
+    <canvas id="background-canvas" style="background-color: rgb(145 73 21 / 0%); opacity: 0.65;"></canvas>
+    `);
+   //Arka Plan kapattÄ±k.  //  <canvas id="background-canvas"></canvas>
  
+   
      
      
     $("#popup-login-gg").html(`<div class="settings-line" id="popup-login-gg1">Login via Google</div>`);
@@ -6565,18 +7006,18 @@ $("#background-canvas").replaceWith(`
    
     
             <footer id="markup-footer">
-            <div class="lang-menu"><button class="lang-button">Language ▴</button>
+            <div class="lang-menu"><button class="lang-button">Language â–´</button>
             <div class="lang-list"><a hreflang="en" href="/">English</a>
-<a hreflang="uk" href="/uk/">Українська</a>
+<a hreflang="uk" href="/uk/">Ğ£ĞºÑ€Ğ°Ñ—Ğ½ÑÑŒĞºĞ°</a>
 <a hreflang="de" href="/de/">Deutsch</a>
-<a hreflang="fr" href="/fr/">Français</a>
-<a hreflang="es" href="/es/">Español</a>
+<a hreflang="fr" href="/fr/">FranÃ§ais</a>
+<a hreflang="es" href="/es/">EspaÃ±ol</a>
 </div></div>
             
-            <a class="link" hreflang="en" href="###">© 2026 Worm Bmw</a>
+            <a class="link" hreflang="en" href="https://wormateserkanconnect.github.io/"> © 2025 WormateFriendsTurkey.io ©</a>
             
-            <a style="font-size: 17px;font-weight: 600;"Worm Bmw !</a>
-          <a style="font-size: 17px;font-weight: 500;color: #ff0;"> Made with <i class='fa fa-heart animated infinite pulse' style='color:red'></i> in Abso !</a>
+            <a class="link" hreflang="en" href="https://skinlab.haylamday.com/">SkinLab by Wormate Friends Connect ©</a>
+          <a style="font-size: 17px;font-weight: 500;color: #ff0;"> Powered by Platen !</a>
             </footer>
 
 
@@ -6906,8 +7347,80 @@ isValidHotkey = function (e) {
     }
 };
 
+let lastMouseUpdate = 0;
+let smoothMouseX = 0;
+let targetMouseX = 0;
+let isGameRunning = true; // Oyunun durumu takip edilir
+const smoothingFactor = 0.2; // 0.1 daha yumuÅŸak, 0.3 daha hÄ±zlÄ±
+
+// Eski eventleri temizleyerek tekrar eklemeyi Ã¶nlÃ¼yoruz
+window.removeEventListener("mousemove", handleMouseMove);
+window.addEventListener("mousemove", handleMouseMove);
+
+function handleMouseMove(event) {
+    if (!isGameRunning) return; // EÄŸer oyun durduysa, mouse hareketlerini iÅŸleme
+    const now = performance.now();
+    
+    // Gereksiz gÃ¼ncellemeleri atlamak iÃ§in FPS dostu sistem
+    if (now - lastMouseUpdate < 8) return;
+    lastMouseUpdate = now;
+
+    targetMouseX = event.clientX / window.innerWidth * Math.PI * 2;
+}
+
+function updateMouseMovement() {
+    if (!isGameRunning) return; // EÄŸer oyun durmuÅŸsa, mouse gÃ¼ncellenmez
+
+    // EÄŸer `theoEvents.eventoPrincipal` tanÄ±mlÄ± deÄŸilse hata vermesini Ã¶nle
+    if (!theoEvents.eventoPrincipal) {
+        console.warn("Hata: theoEvents.eventoPrincipal tanÄ±mlÄ± deÄŸil!"); 
+        return;
+    }
+
+    // Mouse hareketlerini yumuÅŸak ÅŸekilde gÃ¼ncelle
+    smoothMouseX += (targetMouseX - smoothMouseX) * smoothingFactor;
+    theoEvents.eventoPrincipal.sk = smoothMouseX;
+
+    requestAnimationFrame(updateMouseMovement);
+}
+
+// Oyun yeniden baÅŸladÄ±ÄŸÄ±nda eski eventleri sÄ±fÄ±rlayarak ping dÃ¼ÅŸÃ¼rÃ¼yoruz
+function resetGame() {
+    console.log("Oyun sÄ±fÄ±rlandÄ±, mouse eventleri temizleniyor...");
+    isGameRunning = false; // Oyunu geÃ§ici olarak durdur
+    
+    setTimeout(() => {
+        isGameRunning = true; // Oyun tekrar baÅŸlatÄ±ldÄ±ÄŸÄ±nda eventleri aktif et
+        lastMouseUpdate = performance.now(); // Ping oluÅŸmasÄ±nÄ± Ã¶nlemek iÃ§in zaman damgasÄ± yenilenir
+        console.log("Oyun tekrar baÅŸladÄ±, mouse eventleri aktif!");
+    }, 100); // 100ms bekleme sÃ¼resi gereksiz hesaplamalarÄ± Ã¶nler
+}
+
+updateMouseMovement();
 
 
+let lastMouseX = 0;
+let lastMouseY = 0;
 
+document.addEventListener('mousemove', (event) => {
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
 
-console.log("Bmw Update 2026");
+  // Fare hareket hÄ±zÄ±nÄ± hesaplarken son konum ile mevcut konum arasÄ±ndaki farkÄ± dikkate al
+  const deltaX = mouseX - lastMouseX;
+  const deltaY = mouseY - lastMouseY;
+
+  // Solucan Ã¶ÄŸesinin (Ã¶rneÄŸin bir gÃ¶rsel) hareket etmesini saÄŸla
+  const wormElement = document.getElementById("solucan");
+  if (wormElement) {
+    // Hareketi hÄ±zlandÄ±rmak iÃ§in delta ile orantÄ±lÄ± bir ÅŸekilde Ã¶ÄŸeyi hareket ettir
+    wormElement.style.left = (wormElement.offsetLeft + deltaX) + 'px';
+    wormElement.style.top = (wormElement.offsetTop + deltaY) + 'px';
+  }
+
+  // Son fare pozisyonunu gÃ¼ncelle
+  lastMouseX = mouseX;
+  lastMouseY = mouseY;
+});
+
+console.log("Core 2022 Seko Update 2025 (W-SEKO)");
