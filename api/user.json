@@ -236,10 +236,11 @@
             "id": 26,
             "cliente_NOMBRE": "chot dz",
             "cliente_ID": "gg_108022486223048441992",
-            "Client_KeyAccecs": "XTPRIVATESKIN",
             "cliente_DateStarted": "19-04-2025",
             "cliente_DateExpired": "20-04-2026",
-            "status": 1
+            "status": 1,
+            "VIP": "No",
+            "Zoom": "No"
         }
     ]
 }
