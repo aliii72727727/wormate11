@@ -1,5 +1,5 @@
 
-var SITE_XTHOST = "https://wormateserkanconnect.github.io/app2";
+var SITE_XTHOST = "https://wormateserkanconnect.github.io/app2"; 
 window.detectLog = null;
 const _wrmxt = {
     BETAisSkinCustom(input) {
