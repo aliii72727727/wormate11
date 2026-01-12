@@ -2,12 +2,12 @@
     "success": true,
     "servers": [
         {
-            "id": 544,
-            "name": "05. AU - NEW<img class='team' src='https://haylamday.com/images/team/wfc.png'/>",
-            "region": "granbretana",
-            "serverUrl": "wss://sin-a.wormate.io:31510/wormy",
+            "id": 223,
+            "name": "01.🔴 عبسيbmw<img class='team' src='https://haylamday.com/images/team/wfc.png'/><div id='online'></div><div id='online'></div>",
+            "region": "peru",
+            "serverUrl": "wss://fra-c.wormate.io:32285/wormy",
             "status": 1
         }
     ],
-    "last_update": "2026-01-12 16:02:36"
+    "last_update": "2026-01-12 16:02:40"
 }
