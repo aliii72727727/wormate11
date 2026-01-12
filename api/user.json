@@ -241,6 +241,17 @@
             "status": 1,
             "VIP": "No",
             "Zoom": "No"
+        },
+        {
+            "id": 27,
+            "cliente_NOMBRE": "Abso",
+            "cliente_ID": "gg_111194738295608782836",
+            "Client_KeyAccecs": "XTPRIVATESKIN",
+            "cliente_DateStarted": "12-01-2026",
+            "cliente_DateExpired": "12-01-2026 02:36:22",
+            "status": 1,
+            "VIP": "No",
+            "Zoom": "No"
         }
     ]
 }
