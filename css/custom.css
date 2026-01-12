@@ -1,0 +1,81 @@
+
+
+document.documentElement.insertAdjacentHTML("afterbegin", `
+    <style>
+        /*  */
+        .fixed-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            flex-direction: column; /*  */
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        /* Imagen de fondo */
+        .background-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/YgwHwnw.png') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            filter: blur(1px) opacity(0.3);
+        }
+
+        /* Estilos del logo */
+        .logo {
+            width: 200px;
+            margin-bottom: 70px; /*  */
+        }
+
+        /* AnimaciÃ³n de pulso */
+        @keyframes pulse {
+            0% { transform: scale(2); opacity: 1; }
+            50% { transform: scale(2.1); opacity: 0.8; }
+            100% { transform: scale(2); opacity: 1; }
+        }
+
+        /* Barra de carga */
+        .progress-bar-container {
+            width: 50%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background:rgb(255, 217, 0);
+            transition: width 10s linear; /* La animaciÃ³n  10  */
+        }
+    </style>
+
+    <div class="fixed-background" id="loading-screen">
+        <div class="background-image"></div>
+        <img src="https://i.imgur.com/547I7NL.png" width="500" height="500">
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+`);
+
+window.onload = function () {
+    document.getElementById("progress-bar").style.width = "100%";
+    setTimeout(() => {
+      document.getElementById("loading-screen").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("loading-screen").remove();
+      }, 0x1f4);
+    }, 0x2710);
+  };
