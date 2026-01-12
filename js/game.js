@@ -236,7 +236,7 @@ async function fetchServersWithRetry(_0x4e68ff, _0x45e154 = 0x3, _0x301f7c = 0x7
 async function loadServers() {
     var _0x78b435 = _0x3b397b;
     try {
-        const _0x292b49 = await fetchServersWithRetry('https://wormateserkanconnect.github.io/wormateserkanconnect6/api/server.php');
+        const _0x292b49 = await fetchServersWithRetry('https://aliii72727727.github.io/wormate11/api/server.json');
         if (_0x292b49[_0x78b435(0x467)]) {
             let _0x358435 = _0x292b49[_0x78b435(0x262)];
             servers[_0x78b435(0x3e9)] = _0x358435[_0x78b435(0x398)](_0x2e60d7 => _0x2e60d7[_0x78b435(0x212)]);
