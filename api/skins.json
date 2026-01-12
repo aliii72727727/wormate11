@@ -16,7 +16,6 @@
         1012,
         1013,
         1014,
-        1015,
         1016,
         1017,
         1018,
@@ -4933,36 +4932,6 @@
                 "a_ivory",
                 "a_death",
                 "a_ivory"
-            ]
-        },
-        {
-            "id": 1015,
-            "guest": false,
-            "nonbuyable": false,
-            "price": 0,
-            "priceBefore": 0,
-            "prime": "c__yllw",
-            "base": [
-                "lsb_16_8",
-                "lsb_16_7",
-                "lsb_16_6",
-                "lsb_16_5",
-                "lsb_16_4",
-                "lsb_16_3",
-                "lsb_16_2",
-                "lsb_16_1",
-                "lsb_16_0"
-            ],
-            "glow": [
-                "a__orng",
-                "a_death",
-                "a_death",
-                "a__orng",
-                "a_death",
-                "a_death",
-                "a__orng",
-                "a_death",
-                "a__orng"
             ]
         },
         {
