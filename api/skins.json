@@ -56210,6 +56210,17 @@
             "expiresAt": "2025-01-27 19:11:19"
         }
     },
-    "rooms": [],
-    "roomSkins": []
+    "rooms": [
+        {
+            "id": 1,
+            "name": "iu",
+            "device": "all",
+            "active": true,
+            "image": "room_1_1768176940.jpg",
+            "created_at": "2026-01-11 19:15:40"
+        }
+    ],
+    "roomSkins": {
+        "1": []
+    }
 }
