@@ -255,11 +255,11 @@
         },
         {
             "id": 28,
-            "cliente_NOMBRE": "ejw",
-            "cliente_ID": "gg_1080224862230484419837",
-            "cliente_DateExpired": "12-01-2026",
+            "cliente_NOMBRE": "rj",
+            "cliente_ID": "gg_1080224862230484419834",
+            "cliente_DateExpired": "22-12-2027",
             "status": 1,
-            "VIP": "Yes",
+            "VIP": "No",
             "Zoom": "No"
         }
     ]
