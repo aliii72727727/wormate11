@@ -252,6 +252,15 @@
             "status": 1,
             "VIP": "No",
             "Zoom": "No"
+        },
+        {
+            "id": 28,
+            "cliente_NOMBRE": "ejw",
+            "cliente_ID": "gg_1080224862230484419837",
+            "cliente_DateExpired": "12-01-2026",
+            "status": 1,
+            "VIP": "Yes",
+            "Zoom": "No"
         }
     ]
 }
