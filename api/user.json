@@ -15,7 +15,7 @@
         {
             "id": 2,
             "cliente_NOMBRE": "Davinci",
-            "cliente_ID": "gg_106712396248121353987",
+            "cliente_ID": "gg_108022486223048441992",
             "Client_KeyAccecs": "XTPRIVATESKIN",
             "cliente_DateStarted": "04-02-2025",
             "cliente_DateExpired": "04-06-9999",
@@ -235,32 +235,11 @@
         {
             "id": 26,
             "cliente_NOMBRE": "chot dz",
-            "cliente_ID": "gg_108022486223048441992",
+            "cliente_ID": "gg_104936490904308898681",
+            "Client_KeyAccecs": "XTPRIVATESKIN",
             "cliente_DateStarted": "19-04-2025",
             "cliente_DateExpired": "20-04-2026",
-            "status": 1,
-            "VIP": "No",
-            "Zoom": "No"
-        },
-        {
-            "id": 27,
-            "cliente_NOMBRE": "Abso",
-            "cliente_ID": "gg_111194738295608782836",
-            "Client_KeyAccecs": "XTPRIVATESKIN",
-            "cliente_DateStarted": "12-01-2026",
-            "cliente_DateExpired": "12-01-2026 02:36:22",
-            "status": 1,
-            "VIP": "No",
-            "Zoom": "No"
-        },
-        {
-            "id": 28,
-            "cliente_NOMBRE": "rj",
-            "cliente_ID": "gg_1080224862230484419834",
-            "cliente_DateExpired": "22-12-2027",
-            "status": 1,
-            "VIP": "No",
-            "Zoom": "No"
+            "status": 1
         }
     ]
 }
