@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wormate.io Users Database</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .stats {
+            background: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .user-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .user-card {
+            background: #2d2d2d;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border: 1px solid #444;
+        }
+        .user-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: block;
+            border: 3px solid #4CAF50;
+        }
+        .user-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+            margin: 5px 0;
+        }
+        .user-email {
+            color: #888;
+            font-size: 12px;
+            text-align: center;
+            margin: 5px 0;
+        }
+        .user-level {
+            background: #4CAF50;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+        .user-meta {
+            color: #aaa;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 10px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+        .login-method {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+        .facebook { background: #3b5998; }
+        .google { background: #ea4335; }
+        .guest { background: #666; }
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background: #333;
+            color: white;
+            font-size: 16px;
+        }
+        .refresh-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .refresh-btn:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wormate.io User Database</h1>
+    
+    <div class="stats">
+        <div>إجمالي المستخدمين: <span id="totalUsers">0</span></div>
+        <div>آخر تحديث: <span id="lastUpdate">-</span></div>
+        <div>طرق تسجيل الدخول: 
+            <span class="login-method facebook">Facebook</span> <span id="fbCount">0</span> | 
+            <span class="login-method google">Google</span> <span id="ggCount">0</span> | 
+            <span class="login-method guest">Guest</span> <span id="guestCount">0</span>
+        </div>
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+        <input type="text" class="search-box" id="searchInput" placeholder="بحث بالاسم أو البريد الإلكتروني...">
+        <button class="refresh-btn" onclick="loadUsers()">تحديث</button>
+    </div>
+    
+    <div id="loading" style="text-align: center; padding: 40px;">جاري تحميل البيانات...</div>
+    
+    <div class="user-grid" id="userGrid"></div>
+
+    <script>
+        async function loadUsers() {
+            document.getElementById('loading').style.display = 'block';
+            
+            try {
+                const response = await fetch('api/user.json?t=' + Date.now());
+                const data = await response.json();
+                
+                displayUsers(data);
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('loading').innerHTML = 'خطأ في تحميل البيانات';
+            }
+        }
+        
+        function displayUsers(data) {
+            document.getElementById('loading').style.display = 'none';
+            
+            const users = data.users || [];
+            const lastUpdate = data.lastUpdate || '-';
+            
+            document.getElementById('totalUsers').textContent = users.length;
+            document.getElementById('lastUpdate').textContent = lastUpdate;
+            
+            // إحصائيات طرق الدخول
+            let fb = 0, gg = 0, guest = 0;
+            users.forEach(u => {
+                if (u.loginMethod === 'facebook') fb++;
+                else if (u.loginMethod === 'google') gg++;
+                else if (u.loginMethod === 'guest') guest++;
+            });
+            
+            document.getElementById('fbCount').textContent = fb;
+            document.getElementById('ggCount').textContent = gg;
+            document.getElementById('guestCount').textContent = guest;
+            
+            renderUserGrid(users);
+        }
+        
+        function renderUserGrid(users) {
+            const grid = document.getElementById('userGrid');
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            const filtered = users.filter(u => 
+                u.name.toLowerCase().includes(searchTerm) || 
+                u.email.toLowerCase().includes(searchTerm) ||
+                u.id.toLowerCase().includes(searchTerm)
+            );
+            
+            grid.innerHTML = filtered.map(u => `
+                <div class="user-card">
+                    ${u.picture ? `<img src="${u.picture}" class="user-avatar" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(u.name)}&background=4CAF50&color=fff'">` : 
+                    `<img src="https://ui-avatars.com/api/?name=${encodeURIComponent(u.name)}&background=4CAF50&color=fff" class="user-avatar">`}
+                    <div class="user-name">${u.name}</div>
+                    <div class="user-email">${u.email}</div>
+                    <div style="text-align: center;">
+                        <span class="user-level">Level ${u.level || 1}</span>
+                        <span class="login-method ${u.loginMethod}">${u.loginMethod}</span>
+                    </div>
+                    <div class="user-meta">
+                        <div>ID: ${u.id}</div>
+                        <div>${new Date(u.timestamp).toLocaleString('ar-SA')}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // بحث مباشر
+        document.getElementById('searchInput').addEventListener('input', function() {
+            loadUsers();
+        });
+        
+        // تحميل عند فتح الصفحة
+        loadUsers();
+        
+        // تحديث كل 30 ثانية
+        setInterval(loadUsers, 30000);
+    </script>
+</body>
+</html>
