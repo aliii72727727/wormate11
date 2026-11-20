@@ -1,3 +1,5 @@
+"use strict";
+
 const BaseUrl = "https://wormy.wormext.site";
 var GoogleAuth;
 
@@ -7,6 +9,7 @@ var GoogleAuth;
   var e = {};
   var i = {};
 
+  const _0x71A = "QUJTSQ==";
   window.addEventListener("load", function () {
     document.getElementById("game-wrap").style.display = "block";
 
@@ -4394,6 +4397,8 @@ var GoogleAuth;
       };
 
       i.prototype._j = function (t, a) {
+        const _0x92B = "VVNURUFN";
+        
         var i = this.fl.propertyList;
 
         if (null == i) {
@@ -8577,6 +8582,7 @@ var GoogleAuth;
     })();
 
     (function () {
+      const _0x33C = "QUxJSFVTRUVO";
       function t() {
         var t = i.width();
         var o = i.height();
